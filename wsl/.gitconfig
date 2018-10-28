@@ -1,0 +1,20 @@
+[user]
+	name = Rainer Brudna
+	email = rainer.brudna@ohb-ds.de
+[credential]
+	helper = manager
+[alias]
+  st = status
+  ch = checkout
+  chb = checkout -b
+  pcb = rev-parse --abbrev-ref HEAD
+  undo = reset HEAD
+  hist = log --oneline --graph -n30
+  histfull = !git log --graph --pretty=format:\"%C(yellow)%h | %C(green)%aI | %an | %C(white)%s\"
+
+# list aliases
+  la = !git config -l | grep alias
+[core]
+	editor = vim
+	autocrlf = false
+	eol = lf
