@@ -654,3 +654,233 @@ time 1540563952
 old [description:"kopieren des Doku Git Repo auf AME P582015 per AutoSkript" entry:"1540383106" kanabn:"backlog" kanban:"thisweek" modified:"1540383182" project:"ds" status:"pending" tags:"chore" uuid:"63e1bfae-b296-445d-9681-820ec4f78adb"]
 new [description:"kopieren des Doku Git Repo auf AME P582015 per AutoSkript" entry:"1540383106" kanabn:"backlog" kanban:"thisweek" modified:"1540563952" points:"1" project:"ds" status:"pending" tags:"chore" uuid:"63e1bfae-b296-445d-9681-820ec4f78adb"]
 ---
+time 1540797746
+new [description:"Stunden buchen" due:"1541368800" entry:"1540797746" imask:"4" modified:"1540363730" parent:"10fbbba5-6cd6-4d03-ad40-6e750390688f" project:"h2sat" recur:"weekly" status:"pending" tags:"event" uuid:"0464728c-205f-4e83-87a1-51812d084dd0"]
+---
+time 1540797746
+old [description:"Stunden buchen" due:"1538949600" entry:"1538479979" mask:"+++-" modified:"1540363730" project:"h2sat" recur:"weekly" status:"recurring" tags:"event" uuid:"10fbbba5-6cd6-4d03-ad40-6e750390688f"]
+new [description:"Stunden buchen" due:"1538949600" entry:"1538479979" mask:"+++--" modified:"1540797746" project:"h2sat" recur:"weekly" status:"recurring" tags:"event" uuid:"10fbbba5-6cd6-4d03-ad40-6e750390688f"]
+---
+time 1540798112
+old [description:"Stunden buchen" due:"1541368800" entry:"1540797746" imask:"4" modified:"1540363730" parent:"10fbbba5-6cd6-4d03-ad40-6e750390688f" project:"h2sat" recur:"weekly" status:"pending" tags:"event" uuid:"0464728c-205f-4e83-87a1-51812d084dd0"]
+new [description:"Stunden buchen" due:"1541401200" entry:"1540797746" imask:"4" modified:"1540798112" parent:"10fbbba5-6cd6-4d03-ad40-6e750390688f" project:"h2sat" recur:"weekly" status:"pending" tags:"event" uuid:"0464728c-205f-4e83-87a1-51812d084dd0"]
+---
+time 1540798812
+new [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540798812" project:"h2sat" status:"pending" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+---
+time 1540798856
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"backlog" modified:"1540798856" project:"h2sat" status:"pending" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
+time 1540798909
+new [description:"lesen MTG-OHB-PF-TN-0251-04dr" entry:"1540798909" kanban:"backlog" modified:"1540798909" project:"h2sat" status:"pending" uuid:"cc8976d8-565e-4ae8-b89a-fea5f95c4f0a"]
+---
+time 1540799006
+new [description:"evaluieren CPPS use-cases" entry:"1540799006" kanban:"backlog" modified:"1540799006" project:"h2sat" status:"pending" uuid:"cc9e171a-ae12-4a15-875a-5edede16d7bd"]
+---
+time 1540799134
+new [description:"evaluieren CPPS aus MTG" entry:"1540799134" kanban:"backlog" modified:"1540799134" project:"h2sat" status:"pending" uuid:"4adf2a35-da28-4a15-a112-a3af523b0794"]
+---
+time 1540799425
+new [description:"erstellen von use-cases zu den Operations" entry:"1540799425" kanban:"backlog" modified:"1540799425" project:"h2sat" status:"pending" uuid:"6aa518d8-6870-442b-8323-8ee67f0b796d"]
+---
+time 1540799465
+new [description:"erstellen von state Diagrammen zu den Operations" entry:"1540799465" kanban:"backlog" modified:"1540799465" project:"h2sat" status:"pending" uuid:"c751b302-341b-40fb-848d-6c115c96473e"]
+---
+time 1540800135
+old [description:"Stunden buchen" due:"1540764000" entry:"1540278556" imask:"3" modified:"1540363744" parent:"10fbbba5-6cd6-4d03-ad40-6e750390688f" project:"h2sat" recur:"weekly" status:"pending" tags:"event" uuid:"c02403d9-f8bd-4552-be93-aca674f75b2a"]
+new [description:"Stunden buchen" due:"1540764000" entry:"1540278556" imask:"3" modified:"1540800135" parent:"10fbbba5-6cd6-4d03-ad40-6e750390688f" project:"h2sat" recur:"weekly" start:"1540800135" status:"pending" tags:"event" uuid:"c02403d9-f8bd-4552-be93-aca674f75b2a"]
+---
+time 1540802548
+old [description:"Stunden buchen" due:"1538949600" entry:"1538479979" mask:"+++--" modified:"1540797746" project:"h2sat" recur:"weekly" status:"recurring" tags:"event" uuid:"10fbbba5-6cd6-4d03-ad40-6e750390688f"]
+new [description:"Stunden buchen" due:"1538949600" entry:"1538479979" mask:"++++-" modified:"1540802548" project:"h2sat" recur:"weekly" status:"recurring" tags:"event" uuid:"10fbbba5-6cd6-4d03-ad40-6e750390688f"]
+---
+time 1540802548
+old [description:"Stunden buchen" due:"1540764000" entry:"1540278556" imask:"3" modified:"1540800135" parent:"10fbbba5-6cd6-4d03-ad40-6e750390688f" project:"h2sat" recur:"weekly" start:"1540800135" status:"pending" tags:"event" uuid:"c02403d9-f8bd-4552-be93-aca674f75b2a"]
+new [description:"Stunden buchen" due:"1540764000" end:"1540802548" entry:"1540278556" imask:"3" modified:"1540802548" parent:"10fbbba5-6cd6-4d03-ad40-6e750390688f" project:"h2sat" recur:"weekly" status:"completed" tags:"event" uuid:"c02403d9-f8bd-4552-be93-aca674f75b2a"]
+---
+time 1540803871
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5" entry:"1540803871" kanban:"backlog" modified:"1540803871" project:"h2sat" status:"pending" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540803943
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5" entry:"1540803871" kanban:"backlog" modified:"1540803871" project:"h2sat" status:"pending" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"backlog" modified:"1540803943" project:"h2sat" status:"pending" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540804072
+old [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540798812" project:"h2sat" status:"pending" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+new [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540804072" project:"h2sat" status:"pending" tags:"CPPS,eval" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+---
+time 1540804127
+old [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540804072" project:"h2sat" status:"pending" tags:"CPPS,eval" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+new [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540804127" project:"h2sat" status:"pending" tags:"feat,eval,CPPS" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+---
+time 1540807151
+old [description:"übernehmen der Gradle Scripte für Doku-Build-Service" entry:"1540376733" kanban:"waiting" modified:"1540563649" project:"ds" status:"pending" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+new [description:"übernehmen der Gradle Scripte für Doku-Build-Service" entry:"1540376733" kanban:"waiting" modified:"1540807151" project:"ds" start:"1540807151" status:"pending" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+---
+time 1540815178
+old [description:"übernehmen der Gradle Scripte für Doku-Build-Service" entry:"1540376733" kanban:"waiting" modified:"1540807151" project:"ds" start:"1540807151" status:"pending" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+new [description:"übernehmen der Gradle Scripte für Doku-Build-Service" entry:"1540376733" kanban:"inprogress" modified:"1540815178" project:"ds" start:"1540807151" status:"pending" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+---
+time 1540815213
+old [description:"übernehmen der Gradle Scripte für Doku-Build-Service" entry:"1540376733" kanban:"inprogress" modified:"1540815178" project:"ds" start:"1540807151" status:"pending" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+new [description:"übernehmen der Gradle Scripte für Doku-Build-Service" entry:"1540376733" kanban:"done" modified:"1540815213" project:"ds" start:"1540807151" status:"pending" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+---
+time 1540815229
+old [description:"übernehmen der Gradle Scripte für Doku-Build-Service" entry:"1540376733" kanban:"done" modified:"1540815213" project:"ds" start:"1540807151" status:"pending" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+new [description:"übernehmen der Gradle Scripte für Doku-Build-Service" end:"1540815229" entry:"1540376733" kanban:"done" modified:"1540815229" project:"ds" status:"completed" tags:"chore" uuid:"9455e61f-7fb5-4421-adba-1ba027aa82b0"]
+---
+time 1540815361
+new [description:"beschreiben der Build Umgebung VirtualBox DOckerToolbox" entry:"1540815361" kanban:"backlog" modified:"1540815361" project:"ds" status:"pending" uuid:"b001a0cb-eeb0-4bdb-9c6c-90c8b64ee1a0"]
+---
+time 1540815549
+old [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"backlog" modified:"1540798856" project:"h2sat" status:"pending" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"backlog" modified:"1540815549" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
+time 1540815595
+old [description:"lesen MTG-OHB-PF-TN-0251-04dr" entry:"1540798909" kanban:"backlog" modified:"1540798909" project:"h2sat" status:"pending" uuid:"cc8976d8-565e-4ae8-b89a-fea5f95c4f0a"]
+new [description:"lesen MTG-OHB-PF-TN-0251-04dr" entry:"1540798909" kanban:"backlog" modified:"1540815595" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc8976d8-565e-4ae8-b89a-fea5f95c4f0a"]
+---
+time 1540815608
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"backlog" modified:"1540803943" project:"h2sat" status:"pending" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"backlog" modified:"1540815608" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540815658
+old [description:"evaluieren CPPS use-cases" entry:"1540799006" kanban:"backlog" modified:"1540799006" project:"h2sat" status:"pending" uuid:"cc9e171a-ae12-4a15-875a-5edede16d7bd"]
+new [description:"evaluieren CPPS use-cases" entry:"1540799006" kanban:"backlog" modified:"1540815658" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc9e171a-ae12-4a15-875a-5edede16d7bd"]
+---
+time 1540815666
+old [description:"evaluieren CPPS aus MTG" entry:"1540799134" kanban:"backlog" modified:"1540799134" project:"h2sat" status:"pending" uuid:"4adf2a35-da28-4a15-a112-a3af523b0794"]
+new [description:"evaluieren CPPS aus MTG" entry:"1540799134" kanban:"backlog" modified:"1540815666" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"4adf2a35-da28-4a15-a112-a3af523b0794"]
+---
+time 1540815675
+old [description:"erstellen von use-cases zu den Operations" entry:"1540799425" kanban:"backlog" modified:"1540799425" project:"h2sat" status:"pending" uuid:"6aa518d8-6870-442b-8323-8ee67f0b796d"]
+new [description:"erstellen von use-cases zu den Operations" entry:"1540799425" kanban:"backlog" modified:"1540815675" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"6aa518d8-6870-442b-8323-8ee67f0b796d"]
+---
+time 1540815683
+old [description:"erstellen von state Diagrammen zu den Operations" entry:"1540799465" kanban:"backlog" modified:"1540799465" project:"h2sat" status:"pending" uuid:"c751b302-341b-40fb-848d-6c115c96473e"]
+new [description:"erstellen von state Diagrammen zu den Operations" entry:"1540799465" kanban:"backlog" modified:"1540815683" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"c751b302-341b-40fb-848d-6c115c96473e"]
+---
+time 1540815745
+old [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540804127" project:"h2sat" status:"pending" tags:"feat,eval,CPPS" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+new [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540815745" points:"2" project:"h2sat" status:"pending" tags:"feat,eval,CPPS" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+---
+time 1540815756
+old [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"backlog" modified:"1540815549" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"backlog" modified:"1540815756" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
+time 1540815769
+old [description:"lesen MTG-OHB-PF-TN-0251-04dr" entry:"1540798909" kanban:"backlog" modified:"1540815595" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc8976d8-565e-4ae8-b89a-fea5f95c4f0a"]
+new [description:"lesen MTG-OHB-PF-TN-0251-04dr" entry:"1540798909" kanban:"backlog" modified:"1540815769" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc8976d8-565e-4ae8-b89a-fea5f95c4f0a"]
+---
+time 1540815779
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"backlog" modified:"1540815608" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"backlog" modified:"1540815779" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540815957
+old [description:"evaluieren CPPS use-cases" entry:"1540799006" kanban:"backlog" modified:"1540815658" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc9e171a-ae12-4a15-875a-5edede16d7bd"]
+new [description:"evaluieren CPPS use-cases" entry:"1540799006" kanban:"backlog" modified:"1540815957" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc9e171a-ae12-4a15-875a-5edede16d7bd"]
+---
+time 1540815960
+old [description:"evaluieren CPPS aus MTG" entry:"1540799134" kanban:"backlog" modified:"1540815666" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"4adf2a35-da28-4a15-a112-a3af523b0794"]
+new [description:"evaluieren CPPS aus MTG" entry:"1540799134" kanban:"backlog" modified:"1540815960" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"4adf2a35-da28-4a15-a112-a3af523b0794"]
+---
+time 1540815963
+old [description:"erstellen von use-cases zu den Operations" entry:"1540799425" kanban:"backlog" modified:"1540815675" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"6aa518d8-6870-442b-8323-8ee67f0b796d"]
+new [description:"erstellen von use-cases zu den Operations" entry:"1540799425" kanban:"backlog" modified:"1540815963" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"6aa518d8-6870-442b-8323-8ee67f0b796d"]
+---
+time 1540815968
+old [description:"erstellen von state Diagrammen zu den Operations" entry:"1540799465" kanban:"backlog" modified:"1540815683" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"c751b302-341b-40fb-848d-6c115c96473e"]
+new [description:"erstellen von state Diagrammen zu den Operations" entry:"1540799465" kanban:"backlog" modified:"1540815968" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"c751b302-341b-40fb-848d-6c115c96473e"]
+---
+time 1540816022
+old [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"backlog" modified:"1540815745" points:"2" project:"h2sat" status:"pending" tags:"feat,eval,CPPS" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+new [description:"lesen MTG-OHB-PF-RS-0112-12" entry:"1540798812" kanban:"thisweek" modified:"1540816022" points:"2" project:"h2sat" status:"pending" tags:"feat,eval,CPPS" uuid:"faec0e82-8c16-4209-b0a7-8c7971a84e2f"]
+---
+time 1540816031
+old [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"backlog" modified:"1540815756" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"thisweek" modified:"1540816031" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
+time 1540816038
+old [description:"lesen MTG-OHB-PF-TN-0251-04dr" entry:"1540798909" kanban:"backlog" modified:"1540815769" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc8976d8-565e-4ae8-b89a-fea5f95c4f0a"]
+new [description:"lesen MTG-OHB-PF-TN-0251-04dr" entry:"1540798909" kanban:"thisweek" modified:"1540816038" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc8976d8-565e-4ae8-b89a-fea5f95c4f0a"]
+---
+time 1540816044
+old [description:"evaluieren CPPS use-cases" entry:"1540799006" kanban:"backlog" modified:"1540815957" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc9e171a-ae12-4a15-875a-5edede16d7bd"]
+new [description:"evaluieren CPPS use-cases" entry:"1540799006" kanban:"thisweek" modified:"1540816044" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"cc9e171a-ae12-4a15-875a-5edede16d7bd"]
+---
+time 1540816048
+old [description:"evaluieren CPPS aus MTG" entry:"1540799134" kanban:"backlog" modified:"1540815960" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"4adf2a35-da28-4a15-a112-a3af523b0794"]
+new [description:"evaluieren CPPS aus MTG" entry:"1540799134" kanban:"thisweek" modified:"1540816048" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"4adf2a35-da28-4a15-a112-a3af523b0794"]
+---
+time 1540816054
+old [description:"erstellen von use-cases zu den Operations" entry:"1540799425" kanban:"backlog" modified:"1540815963" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"6aa518d8-6870-442b-8323-8ee67f0b796d"]
+new [description:"erstellen von use-cases zu den Operations" entry:"1540799425" kanban:"thisweek" modified:"1540816054" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"6aa518d8-6870-442b-8323-8ee67f0b796d"]
+---
+time 1540816058
+old [description:"erstellen von state Diagrammen zu den Operations" entry:"1540799465" kanban:"backlog" modified:"1540815968" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"c751b302-341b-40fb-848d-6c115c96473e"]
+new [description:"erstellen von state Diagrammen zu den Operations" entry:"1540799465" kanban:"thisweek" modified:"1540816058" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"c751b302-341b-40fb-848d-6c115c96473e"]
+---
+time 1540816062
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"backlog" modified:"1540815779" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"thisweek" modified:"1540816062" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540816154
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"thisweek" modified:"1540816062" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816154" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540816163
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816154" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816163" points:"2" project:"h2sat" start:"1540816163" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540816176
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816163" points:"2" project:"h2sat" start:"1540816163" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816176" points:"1" project:"h2sat" start:"1540816163" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540816246
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816176" points:"1" project:"h2sat" start:"1540816163" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816246" points:"1" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540816367
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540816246" points:"1" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"waiting" modified:"1540816367" points:"1" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540818705
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"waiting" modified:"1540816367" points:"1" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"kanaban:inprogress" entry:"1540803871" kanban:"waiting" modified:"1540818705" points:"1" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540818713
+old [description:"kanaban:inprogress" entry:"1540803871" kanban:"waiting" modified:"1540818705" points:"1" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"kanaban:inprogress" entry:"1540803871" kanban:"waiting" modified:"1540818713" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540818884
+old [description:"kanaban:inprogress" entry:"1540803871" kanban:"waiting" modified:"1540818713" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"waiting" modified:"1540818884" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540818933
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"waiting" modified:"1540818884" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540818933" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540822468
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"inprogress" modified:"1540818933" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"done" modified:"1540822468" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540822493
+old [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" entry:"1540803871" kanban:"done" modified:"1540822468" points:"1" project:"h2sat" start:"1540818713" status:"pending" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+new [description:"lesen H2SAT-SYS-OHB-DD-0002_Issue5 Chapter 6.3" end:"1540822493" entry:"1540803871" kanban:"done" modified:"1540822493" points:"1" project:"h2sat" status:"completed" tags:"CPPS,eval,feat" uuid:"19a8ec0d-3e3a-4fcf-b54d-b1ea3d480741"]
+---
+time 1540824049
+old [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"thisweek" modified:"1540816031" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"inprogress" modified:"1540824049" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
+time 1540824082
+old [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"inprogress" modified:"1540824049" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"inprogress" modified:"1540824082" points:"2" project:"h2sat" start:"1540824082" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
+time 1540826989
+old [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"inprogress" modified:"1540824082" points:"2" project:"h2sat" start:"1540824082" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"inprogress" modified:"1540826989" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
+time 1540827041
+old [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"inprogress" modified:"1540826989" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+new [description:"lesen MTG-ASL-PF-MA-0001_3" entry:"1540798856" kanban:"waiting" modified:"1540827041" points:"2" project:"h2sat" status:"pending" tags:"CPPS,eval,feat" uuid:"9725b799-6f05-42c5-989a-b89e57329cb9"]
+---
