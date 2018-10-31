@@ -6,7 +6,7 @@
 
   "layout" : {
     "v:~:l2" : [
-      { "h:~:p44" : [
+      { "h:~:p42" : [
         "task kanban",
         "tasksh"
       ] },
