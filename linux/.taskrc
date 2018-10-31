@@ -39,14 +39,16 @@ report.list.dateformat=a Y-M-D
 report.list.sort=urgency-
 # report.list.sort=due+,priority-,project+
 
-report.kanban.columns=start.active,id,kanban,description,project,priority,due,entry.age,ccmid,tags
-report.kanban.labels= , ,Kanban,Description,Project,Pri,Due,Age,CCM,Tags
+report.kanban.description=Shows all kanban task
+report.kanban.columns=start.active,id,kanban,project,ccmid,description,priority,points,due,entry.age,tags
+report.kanban.labels= , ,Kanban,Project,CCM,Description,Pri,Pts,Due,Age,Tags
 report.kanban.filter=status:pending
 report.kanban.dateformat=a Y-M-D
 report.kanban.sort=urgency-
 
-report.kanbandone.columns=kanban,description,project,priority,due,entry.age,ccmid,tags
-report.kanbandone.labels=Kanban,Description,Project,Pri,Due,Age,CCM,Tags
+report.kanbandone.description=Shows all completed kanban task
+report.kanbandone.columns=uuid.short,project,ccmid,description,priority,points,due,entry.age,end,points,tags
+report.kanbandone.labels=ID,Project,CCM,Description,Pri,Pts,Due,Age,Finish,Points,Tags
 report.kanbandone.filter=status:completed
 report.kanbandone.dateformat=a Y-M-D
 report.kanbandone.sort=end
@@ -56,9 +58,10 @@ alias.ls=list
 default.command=(due.before:4d or due: ) and status:pending list
 
 calendar.holidays=full
-#include ~/.task/holidays.en-AU.rc
-#include /home/roylez/.task/2013_holidays.rc
-#include /usr/share/doc/task/rc/holidays.en-US.rc
+include ~/.task/Holydays-de_DE-2018.rc
+include ~/.task/Holydays-de_DE-2019.rc
+include ~/.task/Vacation-2018.rc
+#include ~/.task/Vacation-2019.rc
 
 urgency.next.coefficient=15.0                   # +next tag
 urgency.due.coefficient=100.0                   # overdue or near due date
