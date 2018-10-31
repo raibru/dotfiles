@@ -1,0 +1,9 @@
+###############################################################################
+# International Holiday Data provided by Holidata.net
+# http://holidata.net/de-DE/2018.json
+# https://www.opensource.org/licenses/mit-license.php
+#
+###############################################################################
+
+holiday.de-DE1.name=Neujahr
+holiday.de-DE1.date=20190101
