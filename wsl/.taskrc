@@ -101,10 +101,10 @@ include /usr/share/taskwarrior/dark-256.theme
 # personal kanban behavior
 uda.kanban.type=string
 uda.kanban.label=Kanban
-uda.kanban.values=backlog,thisweek,inprogress,waiting,done
+uda.kanban.values=backlog,thisweek,inprogress,holding,done
 uda.kanban.default=backlog
 urgency.uda.kanban.inprogress.coefficient=25
-urgency.uda.kanban.waiting.coefficient=24
+urgency.uda.kanban.holding.coefficient=24
 urgency.uda.kanban.thisweek.coefficient=23
 
 # scrum data

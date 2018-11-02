@@ -98,7 +98,7 @@ include /usr/share/taskwarrior/dark-256.theme
 #include /usr/share/taskwarrior/no-color.theme
 
 # User defined attributes
-# personal kanban behavior
+# personal kanban behavior by keys
 uda.kanban.type=string
 uda.kanban.label=Kanban
 uda.kanban.values=backlog,thisweek,inprogress,holding,done
