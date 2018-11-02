@@ -318,7 +318,7 @@ let g:easytags_events = ['BufWritePost']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagbar settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-#nmap <C-l>  :TagbarToggle<CR>
+"nmap <C-l>  :TagbarToggle<CR>
 nmap <t  :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
