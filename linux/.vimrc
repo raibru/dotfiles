@@ -318,7 +318,8 @@ let g:easytags_events = ['BufWritePost']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagbar settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-l>  :TagbarToggle<CR>
+#nmap <C-l>  :TagbarToggle<CR>
+nmap <t  :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-go
@@ -377,6 +378,22 @@ function MyDiff()
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => toggle between clang header and source
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! SwitchSourceHeader()
+  "update!
+  if (expand ("%:e") == "c" || expand ("%:e") == "cpp")
+    find %:t:r.h
+  else
+    find %:t:r.c
+  endif
+endfunction
+
+"nmap <c-s> :call SwitchSourceHeader()<CR>
+"nmap ,s :call SwitchSourceHeader()<CR>
+nmap <s :call SwitchSourceHeader()<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General behavior
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
@@ -396,9 +413,12 @@ iab xdate <c-r>=strftime("%y-%m/%d %H:%M:%S")<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map @@x !%xmllint --format --recover -^M
+map @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
+map @@r :%s/\r//g<CR>
+map @@l !%xmllint --format --recover -^M
 
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
+nmap <n :NERDTreeToggle<CR>
 
 map <C-Down> <C-E>
 map <C-Up> <C-Y>
