@@ -279,7 +279,8 @@ let g:easytags_events = ['BufWritePost']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagbar settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-l>  :TagbarToggle<CR>
+#nmap <C-l>  :TagbarToggle<CR>
+nmap <t  :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-go
@@ -338,21 +339,53 @@ function MyDiff()
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General abbreviations
+" => toggle between clang header and source
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab xdate <c-r>=strftime("%y-%m/%d %H:%M:%S")<cr>
+function! SwitchSourceHeader()
+  "update!
+  if (expand ("%:e") == "c" || expand ("%:e") == "cpp")
+    find %:t:r.h
+  else
+    find %:t:r.c
+  endif
+endfunction
 
+"nmap <c-s> :call SwitchSourceHeader()<CR>
+"nmap ,s :call SwitchSourceHeader()<CR>
+nmap <s :call SwitchSourceHeader()<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General behavior
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 filetype plugin indent on
+set splitbelow
+set splitright
 
 " NERDTree open automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-" Some mappings
-map @@x !%xmllint --format --recover -^M
-map <C-n> :NERDTreeToggle<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General abbreviations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+iab xdate <c-r>=strftime("%y-%m/%d %H:%M:%S")<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
+map @@r :%s/\r//g<CR>
+map @@l !%xmllint --format --recover -^M
+
+"map <C-n> :NERDTreeToggle<CR>
+nmap <n :NERDTreeToggle<CR>
+
 map <C-Down> <C-E>
 map <C-Up> <C-Y>
+map <C-S-up> :m-2<CR>
+map <C-S-down> :m+1<CR>
+map <C-S-PageUp> :bp<CR>
+map <C-S-PageDown> :bn<CR>
 
 "EOF
