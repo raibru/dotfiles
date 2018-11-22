@@ -5,17 +5,15 @@
   "auto-attach" : true,
 
   "layout" : {
-    "v:~:p33:l2" : [
-      { "h:~:p33" : [
-        "task",
-          { "v:~:p50:p33" : [
-            "task rc.context:none summary",
-            "task rc.context:default overdue",
-            "task rc.context:none +today"
-          ] }
+    "v:~:l2" : [
+      { "h:p62:~" : [
+        "task history",
+        { "v:p80:p10:p10" : [
+          "task agenda",
+          "tasksh",
+          "task summary"
+        ] }
       ] },
-      "task calendar",
-      "task kanban"
-    ]
-  }
+      "task calendar"
+  ] }
 }

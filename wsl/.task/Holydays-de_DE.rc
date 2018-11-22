@@ -43,5 +43,12 @@ holiday.de-DE18.name=Zweiter Weihnachtstag
 holiday.de-DE18.date=20181226
 holiday.de-DE19.name=Silvester
 holiday.de-DE19.date=20181231
-holiday.de-DE11.name=Neujahr
-holiday.de-DE11.date=20190101
+###############################################################################
+# International Holiday Data provided by Holidata.net
+# http://holidata.net/de-DE/2019.json
+# https://www.opensource.org/licenses/mit-license.php
+#
+###############################################################################
+
+holiday.de-DE20.name=Neujahr
+holiday.de-DE20.date=20190101

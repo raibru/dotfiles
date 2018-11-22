@@ -28,6 +28,11 @@ due=1
 monthsperline=3
 alias.burndown=burndown.daily
 
+alias.ls=list
+
+default.command=(due.before:4d or due: ) and status:pending list
+
+# Reports definitions
 report.long.dateformat=a Y-M-D
 report.list.description=Lists all tasks matching the specified criteria
 # report.list.columns=id,project,priority,due.relative,due,depends,recur,urgency,tags,description
@@ -42,29 +47,34 @@ report.list.sort=urgency-
 report.kanban.description=Shows all kanban task
 report.kanban.columns=start.active,id,kanban,project,ccmid,description,priority,points,due,entry.age,tags
 report.kanban.labels= , ,Kanban,Project,CCM,Description,Pri,Pts,Due,Age,Tags
-report.kanban.filter=status:pending
+report.kanban.filter=status:pending and (kanban:backlog or kanban:thisweek or kanban:inprogress or kanban:holding)
 report.kanban.dateformat=a Y-M-D
 report.kanban.sort=urgency-
 
 report.kanbandone.description=Shows all completed kanban task
 report.kanbandone.columns=uuid.short,project,ccmid,description,priority,points,due,entry.age,end,points,tags
 report.kanbandone.labels=ID,Project,CCM,Description,Pri,Pts,Due,Age,Finish,Points,Tags
-report.kanbandone.filter=status:completed
+report.kanbandone.filter=status:completed and kanban:done
 report.kanbandone.dateformat=a Y-M-D
 report.kanbandone.sort=end
 
-alias.ls=list
+report.agenda.description=Shows all pending tasks
+report.agenda.columns=start.active,id,kanban,project,ccmid,description,priority,points,due,entry.age,tags
+report.agenda.labels= , ,Kanban,Project,CCM,Description,Pri,Pts,Due,Age,Tags
+report.agenda.filter=status:pending
+report.agenda.dateformat=a Y-M-D
+report.agenda.sort=urgency-,due
 
-default.command=(due.before:4d or due: ) and status:pending list
+report.agendadone.description=Shows all completed task
+report.agendadone.columns=uuid.short,project,ccmid,description,priority,points,due,entry.age,end,points,tags
+report.agendadone.labels=ID,Project,CCM,Description,Pri,Pts,Due,Age,Finish,Points,Tags
+report.agendadone.filter=status:completed
+report.agendadone.dateformat=a Y-M-D
+report.agendadone.sort=project+/,ccmid+/,end
 
-calendar.holidays=full
-include ~/.task/Holydays-de_DE-2018.rc
-include ~/.task/Holydays-de_DE-2019.rc
-include ~/.task/Vacation-2018.rc
-#include ~/.task/Vacation-2019.rc
-
+# coefficient definition
 urgency.next.coefficient=15.0                   # +next tag
-urgency.due.coefficient=100.0                   # overdue or near due date
+urgency.due.coefficient=150.0                   # overdue or near due date
 urgency.blocking.coefficient=8.0                # blocking other tasks
 urgency.priority.coefficient=6.0                # priority
 urgency.active.coefficient=4.0                  # already started tasks
@@ -98,14 +108,16 @@ include /usr/share/taskwarrior/dark-256.theme
 #include /usr/share/taskwarrior/no-color.theme
 
 # User defined attributes
-# personal kanban behavior
+# personal kanban behavior by keys
 uda.kanban.type=string
 uda.kanban.label=Kanban
 uda.kanban.values=backlog,thisweek,inprogress,holding,done
 uda.kanban.default=backlog
-urgency.uda.kanban.inprogress.coefficient=25
-urgency.uda.kanban.holding.coefficient=24
-urgency.uda.kanban.thisweek.coefficient=23
+urgency.uda.kanban.inprogress.coefficient=30
+urgency.uda.kanban.holding.coefficient=25
+urgency.uda.kanban.thisweek.coefficient=20
+color.uda.kanban.thisweek=rgb031
+color.uda.kanban.holding=rgb440
 
 # scrum data
 uda.points.type=numeric
@@ -114,5 +126,15 @@ uda.points.label=Points
 # additional change management id
 uda.ccmid.type=numeric
 uda.ccmid.label=CCM-ID
+
+# Coloring
+color.tagged=
+
+color.calendar.weekend=grey12
+color.calendar.holiday.urlaub=black on rgb141
+
+calendar.holidays=full
+include ~/.task/Holydays-de_DE.rc
+include ~/.task/Vacation.rc
 
 # eof

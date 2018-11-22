@@ -1,0 +1,41 @@
+###############################################################################
+# My Vacations
+# 2018
+###############################################################################
+
+holiday.urlaub.1.name=Urlaub
+holiday.urlaub.1.date=20181221
+holiday.urlaub.2.name=Urlaub
+holiday.urlaub.2.date=20181224
+holiday.urlaub.3.name=Urlaub
+holiday.urlaub.3.date=20181227
+holiday.urlaub.4.name=Urlaub
+holiday.urlaub.4.date=20181228
+holiday.urlaub.5.name=Urlaub
+holiday.urlaub.5.date=20181231
+
+###############################################################################
+# My Vacations
+# 2019
+###############################################################################
+
+holiday.urlaub.6.name=Urlaub
+holiday.urlaub.6.date=20190101
+holiday.urlaub.7.name=Urlaub
+holiday.urlaub.7.date=20190102
+holiday.urlaub.8.name=Urlaub
+holiday.urlaub.8.date=20190103
+holiday.urlaub.9.name=Urlaub
+holiday.urlaub.9.date=20190104
+holiday.urlaub.10.name=Urlaub
+holiday.urlaub.10.date=20190107
+holiday.urlaub.11.name=Urlaub
+holiday.urlaub.11.date=20190108
+holiday.urlaub.12.name=Urlaub
+holiday.urlaub.12.date=20190109
+holiday.urlaub.13.name=Urlaub
+holiday.urlaub.13.date=20190110
+holiday.urlaub.14.name=Urlaub
+holiday.urlaub.14.date=20190111
+
+# EOF

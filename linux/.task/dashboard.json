@@ -6,9 +6,13 @@
 
   "layout" : {
     "v:~:l2" : [
-      { "h:~:p42" : [
-        "task kanban",
-        "tasksh"
+      { "h:p62:~" : [
+        "task history",
+        { "v:p80:p10:p10" : [
+          "task agenda",
+          "tasksh",
+          "task summary"
+        ] }
       ] },
       "task calendar"
   ] }
