@@ -285,8 +285,8 @@ let g:ale_lint_on_enter = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neomake settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd! BufWritePost * Neomake
-let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
+"autocmd! BufWritePost * Neomake
+"let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-easytag 
