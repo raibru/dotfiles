@@ -53,7 +53,7 @@ Plugin 'kien/ctrlp.vim'
 " It's an interactive Unix filter for command-line that can be used with any
 " list; files, command history, processes, hostnames, bookmarks, git commits,
 " etc
-"Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf'
 
 " Command-T is a Vim plug-in that provides an extremely fast "fuzzy" mechanism
 " for Opening files and buffers Jumping to tags and help Running commands,
