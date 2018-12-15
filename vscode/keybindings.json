@@ -1,0 +1,105 @@
+// Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
+[
+  {
+    "key": "ctrl+alt+g",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "editor.fold",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "editor.unfold",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+b",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "bookmarks.list",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Compile"
+  },
+  {
+    "key": "alt+e b",
+    "command": "workbench.action.tasks.runTask",
+    "args": "build",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+e t",
+    "command": "workbench.action.tasks.runTask",
+    "args": "test",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+e d",
+    "command": "workbench.action.tasks.runTask",
+    "args": "docs",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+e r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "build",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+e m",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Clean-Test",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "better-line-select.downward"
+  },
+  {
+    "key": "alt+o",
+    "command": "better-line-select.upward"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-better-line-select.downward"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-better-line-select.upward"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.action.files.revert",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+p f",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "alt+p t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "alt+p e",
+    "command": "workbench.action.terminal.runSelectedText"
+  },
+  {
+    "key": "alt+p m",
+    "command": "workbench.action.toggleMaximizedPanel"
+  }
+]
