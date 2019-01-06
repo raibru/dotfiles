@@ -3,12 +3,18 @@
 	email = rainer.brudna@arcor.de
 [alias]
   st = status
+  bs = bulk status
   ch = checkout
   chb = checkout -b
   pcb = rev-parse --abbrev-ref HEAD
-  undo = reset HEAD
   hist = log --oneline --graph -n30
   histfull = !git log --graph --pretty=format:\"%C(yellow)%h | %C(green)%aI | %an | %C(white)%s\"
+
+  cm = bulk checkout master
+  gitmerge = git mergetool -t vimdiff
+  get = pull
+
+  undo = reset HEAD
 
 # list aliases
   la = !git config -l | grep alias
