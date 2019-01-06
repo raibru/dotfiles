@@ -416,6 +416,12 @@ iab xdate <c-r>=strftime("%y-%m/%d %H:%M:%S")<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" No cursor movements in insert mode
+ino <down>  <Nop>
+ino <up>    <Nop>
+ino <left>  <Nop>
+ino <right> <Nop>
+
 map @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
 map @@r :%s/\r//g<CR>
 map @@l !%xmllint --format --recover -^M
