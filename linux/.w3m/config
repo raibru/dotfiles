@@ -59,6 +59,12 @@ disable_secret_security_check 0
 passwd_file ~/.w3m/passwd
 use_lessopen 0
 bgextviewer 1
+extbrowser9 bash -c 'TS_SOCKET=/tmp/w3m tsp youtube-dl -c --restrict-filenames -x --audio-format mp3  -o "~/Download/%(title)s" "$0" && notify-send -t 5000 -i audio-x-generic "Youtube-DL: ripping audio" "$0"
+extbrowser8 
+extbrowser7 
+extbrowser6 
+extbrowser5 
+extbrowser4 
 extbrowser3 
 extbrowser2 
 extbrowser /usr/bin/firefox
