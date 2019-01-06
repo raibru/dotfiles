@@ -1,105 +1,122 @@
 // Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
 [
   {
-    "key": "ctrl+alt+g",
+    "key": "ctrl+shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+- n",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.view.search"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+- s",
+    "command": "workbench.action.splitEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+- z X",
     "command": "editor.foldAll",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+h",
+    "key": "ctrl+- z O",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+f",
+    "key": "ctrl+- z x",
     "command": "editor.fold",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+d",
+    "key": "ctrl+- z o",
     "command": "editor.unfold",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+k ctrl+b",
+    "key": "ctrl+- m m",
     "command": "bookmarks.toggle",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+k ctrl+l",
+    "key": "ctrl+- m l",
     "command": "bookmarks.list",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+b",
+    "key": "ctrl+- c",
     "command": "workbench.action.tasks.runTask",
     "args": "Compile"
   },
   {
-    "key": "alt+e b",
+    "key": "ctrl+- b",
     "command": "workbench.action.tasks.runTask",
     "args": "build",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+e t",
+    "key": "ctrl+- t",
     "command": "workbench.action.tasks.runTask",
     "args": "test",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+e d",
+    "key": "ctrl+- d",
     "command": "workbench.action.tasks.runTask",
     "args": "docs",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+e r",
+    "key": "ctrl+- r",
     "command": "workbench.action.tasks.runTask",
-    "args": "build",
+    "args": "run",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+e m",
+    "key": "ctrl+- x",
     "command": "workbench.action.tasks.runTask",
     "args": "Clean-Test",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+l",
+    "key": "ctrl+- p f",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+- p t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+- e",
+    "command": "workbench.action.terminal.runSelectedText"
+  },
+  {
+    "key": "ctrl+- -",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "alt+k",
     "command": "better-line-select.downward"
   },
   {
-    "key": "alt+o",
+    "key": "alt+j",
     "command": "better-line-select.upward"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-better-line-select.downward"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "-better-line-select.upward"
   },
   {
     "key": "ctrl+shift+e",
     "command": "workbench.action.files.revert",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+p f",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "alt+p t",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "alt+p e",
-    "command": "workbench.action.terminal.runSelectedText"
-  },
-  {
-    "key": "alt+p m",
-    "command": "workbench.action.toggleMaximizedPanel"
   }
 ]
