@@ -1,0 +1,5 @@
+for i in ~/.bash/func/*; do
+	. $i
+done
+
+# vim: set syn=sh :
