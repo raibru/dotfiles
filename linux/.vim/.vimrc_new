@@ -1,6 +1,6 @@
 
 "============== Custom scripts ===============
-source ~/.vim/after/syntaxcheck.vim
+"source ~/.vim/after/syntaxcheck.vim
 
 "============== Filetype stuff ===============
 filetype plugin on
@@ -11,13 +11,13 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 
 " Load custom settings
-source ~/.vim/startup/color.vim
-source ~/.vim/startup/commands.vim
-source ~/.vim/startup/functions.vim
-source ~/.vim/startup/mappings.vim
-source ~/.vim/startup/settings.vim
+source ~/.vim/config/color.vim
+source ~/.vim/config/commands.vim
+source ~/.vim/config/functions.vim
+source ~/.vim/config/mappings.vim
+source ~/.vim/config/settings.vim
 
 " Syntax-specific settings
-source ~/.vim/startup/vim.vim
-source ~/.vim/startup/yaml.vim
-source ~/.vim/startup/md.vim
+source ~/.vim/config/vim.vim
+source ~/.vim/config/yaml.vim
+source ~/.vim/config/md.vim
