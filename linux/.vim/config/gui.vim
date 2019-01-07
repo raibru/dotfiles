@@ -54,12 +54,8 @@ if has("gui_running")
 
   "
   " some schema behavior
+  " see color.vim
   "
-  "colorscheme gruvbox
-  "let g:gruvbox_contrast_light = 'hard'
-  "set background=dark    " Setting dark mode
-  "set background=light   " Setting light mode
-  colorscheme murphy
   set guioptions-=T  " no toolbar
   " GUI is running or is about to start.
   " Maximize gvim window.
@@ -70,7 +66,6 @@ if has("gui_running")
   set guioptions-=l
   set guioptions-=L
 else
-  colorscheme murphy
   " This is console Vim.
   "if exists("+lines")
   "  set lines=50
