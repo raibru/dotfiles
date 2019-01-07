@@ -1,0 +1,2 @@
+*.vim/
+!Vundle.vim/readme.md
