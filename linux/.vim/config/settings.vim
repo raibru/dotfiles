@@ -18,44 +18,43 @@ set splitbelow
 set splitright
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set dict=/usr/share/dict/words
-set cursorline
-set showcmd
-set ruler
-set incsearch
-set wildmenu
-set synmaxcol=0
-set term=screen-256color
-set display=uhex
-set shortmess=aAIsT
+"set cursorline
+"set showcmd
+"set ruler
+"set incsearch
+"set wildmenu
+"set synmaxcol=0
+"set term=screen-256color
+"set display=uhex
+"set shortmess=aAIsT
 set cmdheight=2
 set nowrap
-let &scrolloff=999-&scrolloff
-set smartcase
-set nowritebackup
+"let &scrolloff=999-&scrolloff
+"set smartcase
+"set nowritebackup
 
 set completeopt=menu
-set mousemodel=popup
-set backspace=2
+"set mousemodel=popup
+"set backspace=2
 "set backspace=indent,eol,start
 
 set enc=utf-8
 set fillchars=vert:¦
 
-set foldcolumn=1
-set cc=+1,+2
+"set foldcolumn=1
+"set cc=+1,+2
 
-set linespace=0
+"set linespace=0
 set history=1000
-set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
+"set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
 
 set laststatus=2
 set ffs=unix,dos
-set mouse=a
-set vb
+"set mouse=a
+"set vb
 set ttym=xterm2
 
-set wrap
+"set wrap
 
 set tags=./tags
 
@@ -87,6 +86,8 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+set viminfo+=n~/.vim/tmp/.viminfo     " info file
 
 " Backups
 set backup                        " enable backups
