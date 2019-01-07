@@ -1,10 +1,14 @@
+"
+" Settings
+"
 "custom mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => toggle between clang header and source
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "nmap <c-s> :call SwitchSourceHeader()<CR>
 "nmap ,s :call SwitchSourceHeader()<CR>
-nmap <leader>s :call SwitchSourceHeader()<CR>
+nnoremap <leader>s :call SwitchSourceHeader()<CR>
+"nmap <s :call SwitchSourceHeader()<CR>
 
 map @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
 map @@r :%s/\r//g<CR>
@@ -111,8 +115,8 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
 " Sort lines
-nnoremap <leader>s vip:sort<cr>
-vnoremap <leader>s :sort<cr>
+nnoremap <leader>o vip:sort<cr>
+vnoremap <leader>o :sort<cr>
 
 " Buffer/Tabs
 "nnoremap <leader>( :tabprev<cr>
