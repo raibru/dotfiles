@@ -10,7 +10,7 @@ source ~/.vim/config/filetype.vim
 "============== Script configs ===============
 
 " Color spezific settings
-source ~/.vim/color/goodwolf.vim
+source ~/.vim/colors/goodwolf.vim
 
 " Load custom settings
 source ~/.vim/config/settings.vim
