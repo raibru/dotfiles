@@ -1,16 +1,36 @@
+"custom mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => toggle between clang header and source
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nmap <c-s> :call SwitchSourceHeader()<CR>
+"nmap ,s :call SwitchSourceHeader()<CR>
+nmap <leader>s :call SwitchSourceHeader()<CR>
+
+map @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
+map @@r :%s/\r//g<CR>
+map @@l !%xmllint --format --recover -^M
+
+map <C-Down> <C-E>
+map <C-Up> <C-Y>
+map <C-S-up> :m-2<CR>
+map <C-S-down> :m+1<CR>
+map <C-S-PageUp> :bp<CR>
+map <C-S-PageDown> :bn<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unmap the arrow keys
-no <down> ddp
-no <left> <Nop>
-no <right> <Nop>
-no <up> ddkP
+"no <down> ddp
+"no <left> <Nop>
+"no <right> <Nop>
+"no <up> ddkP
 ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
 ino <up> <Nop>
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
+"vno <down> <Nop>
+"vno <left> <Nop>
+"vno <right> <Nop>
+"vno <up> <Nop>
 
 "============== Custom Mappings ===============
 " general mapping

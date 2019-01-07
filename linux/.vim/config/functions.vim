@@ -1,17 +1,34 @@
 "============== Custom Functions ===============
-fun! Format_WhiteSpace_RemoveTrailing()
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => toggle between clang header and source
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! SwitchSourceHeader()
+  "update!
+  if (expand ("%:e") == "c" || expand ("%:e") == "cpp")
+    find %:t:r.h
+  else
+    find %:t:r.c
+  endif
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! Format_WhiteSpace_RemoveTrailing()
 	:%s/\v\s*$//g
 endfun
 
-fun! Format_Inflection_ToCamelCase()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! Format_Inflection_ToCamelCase()
 	:s/\v([a-z])_([a-z])/\1\u\2/g
 endfun
 
-fun! Format_Inflection_ToUnderscored()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! Format_Inflection_ToUnderscored()
 	:s/\v([a-z])([A-Z])/\L\1_\2/g
 endfun
 
-fun! CheckTabs()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! CheckTabs()
 	if search("\t") != 0
 		echohl ErrorMsg | ec "                                 !WARNING!                              "
 					\ |              ec "There are tabs in the file, do you want to convert them to spaces? [Y/n]" | echohl None
@@ -24,6 +41,7 @@ fun! CheckTabs()
 	endif
 endfun
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! EnsureDirExists ()
 	let required_dir = expand("%:h")
 	if !isdirectory(required_dir)
@@ -31,12 +49,14 @@ function! EnsureDirExists ()
 	endif
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " screen stuff
-fun! s:Sinit(filen)
+function! s:Sinit(filen)
 	echo expand(a:filen)
 	exec "ScreenShell cd " . expand(a:filen) . "; \\clear"
 endfun
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ FocusMode
 function! ToggleFocusMode()
 	if (&foldcolumn != 12)
@@ -61,8 +81,8 @@ function! ToggleFocusMode()
 endfunc
 nnoremap <F1> :call ToggleFocusMode()<cr>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status Line ------------------------------------------------------------- {{{
-
 function! StatusLineMode()
     let mode = mode()
 
@@ -109,6 +129,7 @@ function! StatusLineMode()
     endif
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! SetStatusLine(winnr)
     let s = ""
 
@@ -156,15 +177,16 @@ function! SetStatusLine(winnr)
     return s
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! RefreshStatusLine()
     for nr in range(1, winnr('$'))
         call setwinvar(nr, '&statusline', '%!SetStatusLine(' . nr . ')')
     endfor
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " This is from https://github.com/sgeb/vim-diff-fold/ without the extra
 " settings crap.  Just the folding expr.
-
 function! DiffFoldLevel()
     let l:line=getline(v:lnum)
 
@@ -180,12 +202,5 @@ function! DiffFoldLevel()
         return '='
     endif
 endfunction
-
-augroup ft_diff
-    au!
-
-    autocmd FileType diff setlocal foldmethod=expr
-    autocmd FileType diff setlocal foldexpr=DiffFoldLevel()
-augroup END
 
 " EOF
