@@ -2,9 +2,6 @@
 "============== Custom scripts ===============
 "source ~/.vim/after/syntaxcheck.vim
 
-"============== Bundle stuff ===============
-source ~/.vim/config/bundles.vim
-
 "============== Filetype stuff ===============
 filetype plugin on
 filetype indent on
@@ -14,6 +11,7 @@ source ~/.vim/config/filetype.vim
 
 " Load custom settings
 source ~/.vim/config/settings.vim
+source ~/.vim/config/bundles.vim
 source ~/.vim/config/gui.vim
 source ~/.vim/config/color.vim
 source ~/.vim/config/functions.vim
@@ -22,6 +20,10 @@ source ~/.vim/config/mappings.vim
 source ~/.vim/config/abbrs.vim
 
 " Syntax-specific settings
-source ~/.vim/config/vim.vim
-source ~/.vim/config/yaml.vim
-source ~/.vim/config/md.vim
+source ~/.vim/syntax/confluencewiki.vim
+source ~/.vim/syntax/git.vim
+source ~/.vim/syntax/gitcommit.vim
+source ~/.vim/syntax/gitrebase.vim
+source ~/.vim/syntax/nginx.vim
+source ~/.vim/syntax/md.vim
+source ~/.vim/syntax/yaml.vim
