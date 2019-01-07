@@ -2,20 +2,24 @@
 "============== Custom scripts ===============
 "source ~/.vim/after/syntaxcheck.vim
 
+"============== Bundle stuff ===============
+source ~/.vim/config/bundles.vim
+
 "============== Filetype stuff ===============
 filetype plugin on
 filetype indent on
+source ~/.vim/config/filetype.vim
 
 "============== Script configs ===============
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
 
 " Load custom settings
-source ~/.vim/config/color.vim
-source ~/.vim/config/commands.vim
-source ~/.vim/config/functions.vim
-source ~/.vim/config/mappings.vim
 source ~/.vim/config/settings.vim
+source ~/.vim/config/gui.vim
+source ~/.vim/config/color.vim
+source ~/.vim/config/functions.vim
+source ~/.vim/config/commands.vim
+source ~/.vim/config/mappings.vim
+source ~/.vim/config/abbrs.vim
 
 " Syntax-specific settings
 source ~/.vim/config/vim.vim
