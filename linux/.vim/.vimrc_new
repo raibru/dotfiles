@@ -9,6 +9,9 @@ source ~/.vim/config/filetype.vim
 
 "============== Script configs ===============
 
+" Color spezific settings
+source ~/.vim/color/goodwolf.vim
+
 " Load custom settings
 source ~/.vim/config/settings.vim
 source ~/.vim/config/bundles.vim
@@ -27,3 +30,5 @@ source ~/.vim/syntax/gitrebase.vim
 source ~/.vim/syntax/nginx.vim
 source ~/.vim/syntax/md.vim
 source ~/.vim/syntax/yaml.vim
+
+" EOF
