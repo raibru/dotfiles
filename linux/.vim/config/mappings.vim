@@ -71,6 +71,14 @@ nmap <C-n> :noh<CR>
 "noremap ds) F(xf)x
 "noremap cs) F(xf)xi
 
+" CTRL-P mappings
+" Use a leader instead of the actual named binding
+nmap <leader>p :CtrlP<cr>
+" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
+
 nmap cu ct_
 nmap cU cf_
 
@@ -131,10 +139,10 @@ nnoremap <leader>= :ls<cr>
 nnoremap <leader>W :set wrap!<cr>
 
 " Copying/pasting text to the system clipboard.
-noremap  <leader>p "+p
-vnoremap <leader>y "+y
-nnoremap <leader>y VV"+y
-nnoremap <leader>Y "+y
+noremap  <leader><leader>p "+p
+vnoremap <leader><leader>y "+y
+nnoremap <leader><leader>y VV"+y
+nnoremap <leader><leader>Y "+y
 
 " Reselect last-pasted text
 nnoremap gv `[v`]
