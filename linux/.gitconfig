@@ -18,3 +18,10 @@
 
 # list aliases
   la = !git config -l | grep alias
+
+# merge/diff behavior
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
