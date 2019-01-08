@@ -37,36 +37,39 @@ ino <up> <Nop>
 "vno <up> <Nop>
 
 "============== Custom Mappings ===============
-" general mapping
-nmap <C-Tab> :tabnext<CR>
-nmap <C-S-Tab> :tabprevious<CR>
-map <C-S-Tab> :tabprevious<CR>
-map <C-Tab> :tabnext<CR>
-imap <C-S-Tab> <ESC>:tabprevious<CR>
-imap <C-Tab> <ESC>:tabnext<CR>
-noremap <F7> :set expandtab!<CR>
-nmap <Leader>h :tabnew %:h<CR>
+" tabs mapping have to check: I not working with tabs
+"open tag in new tab
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+"nmap <C-Tab> :tabnext<CR>
+"nmap <C-S-Tab> :tabprevious<CR>
+"map <C-S-Tab> :tabprevious<CR>
+"map <C-Tab> :tabnext<CR>
+"imap <C-S-Tab> <ESC>:tabprevious<CR>
+"imap <C-Tab> <ESC>:tabnext<CR>
+"noremap <F7> :set expandtab!<CR>
+"nmap <Leader>h :tabnew %:h<CR>
 
 "turn off search highlighting
 nmap <C-n> :noh<CR>
 
-"custom comma motion mapping
-nmap di, f,dT,
-nmap ci, f,cT,
-nmap da, f,ld2F,i,<ESC>l "delete argument 
-nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
+" custom comma motion mapping
+" delete command dd is not working correct only after hit esc line is deleted
+"nmap di, f,dT,
+"nmap ci, f,cT,
+"nmap da, f,ld2F,i,<ESC>l "delete argument 
+"nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
 
 " delete surrounding characters
-noremap ds{ F{xf}x
-noremap cs{ F{xf}xi
-noremap ds" F"x,x
-noremap cs" F"x,xi
-noremap ds' F'x,x
-noremap cs' F'x,xi
-noremap ds( F(xf)x
-noremap cs( F(xf)xi
-noremap ds) F(xf)x
-noremap cs) F(xf)xi
+"noremap ds{ F{xf}x
+"noremap cs{ F{xf}xi
+"noremap ds" F"x,x
+"noremap cs" F"x,xi
+"noremap ds' F'x,x
+"noremap cs' F'x,xi
+"noremap ds( F(xf)x
+"noremap cs( F(xf)xi
+"noremap ds) F(xf)x
+"noremap cs) F(xf)xi
 
 nmap cu ct_
 nmap cU cf_
@@ -94,9 +97,6 @@ nmap N Nzz
 nmap } }zz
 nmap { {zz
 
-"open tag in new tab
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
 "quick pairs
 imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
@@ -119,8 +119,8 @@ nnoremap <leader>o vip:sort<cr>
 vnoremap <leader>o :sort<cr>
 
 " Buffer/Tabs
-"nnoremap <leader>( :tabprev<cr>
-"nnoremap <leader>) :tabnext<cr>
+""nnoremap <leader>( :tabprev<cr>
+""nnoremap <leader>) :tabnext<cr>
 nnoremap <leader>( :bp<cr>
 nnoremap <leader>) :bn<cr>
 nnoremap <leader>= :ls<cr>
