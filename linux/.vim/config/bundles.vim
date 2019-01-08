@@ -32,79 +32,53 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
 
 " Utility
-" NERDTree is a file system explorer for the Vim editor
-Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'              " NERDTree is a file system explorer for the Vim editor
+Plugin 'vim-airline/vim-airline'          " Lean & mean status/tabline for vim that's light as air
+Plugin 'kien/ctrlp.vim'                   " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
+Plugin 'junegunn/fzf'                     " It's an interactive Unix filter for command-line that can
+                                          "   be used with any list; files, command history, processes,
+                                          "   hostnames, bookmarks, git commits, etc
+Plugin 'tpope/vim-surround'               " Surround.vim is all about 'surroundings': parentheses, brackets,
+                                          "   quotes, XML tags, and more
+Plugin 'tpope/vim-commentary'             " Comment stuff out
+Plugin 'xolox/vim-misc'                   " Automated tag generation and syntax highlighting in Vim
+Plugin 'xolox/vim-easytags'               " need xolos/vim-misc
+Plugin 'majutsushi/tagbar'                " tagbar shows functions, variables and other identifiers in a split pane
+Plugin 'neomake/neomake'                  " Neomake is a plugin for Vim/Neovim to asynchronously run programs.
+                                          "   You can use it instead of the built-in :make
+Plugin 'terryma/vim-multiple-cursors'     " VSCode/Sublime Text's awesome multiple selection feature into Vim
 
-" Lean & mean status/tabline for vim that's light as air
-Plugin 'vim-airline/vim-airline'
+" Lint Support
+Plugin 'vim-syntastic/syntastic'          " Syntastic is a syntax checking plugin and runs files through external
+                                          "   syntax checkers and displays any resulting errors to the user
+Plugin 'w0rp/ale'                         " ALE (Asynchronous Lint Engine) is a plugin for providing linting
 
-" Syntastic is a syntax checking plugin for Vim created by Martin Grenfell. It
-" runs files through external syntax checkers and displays any resulting
-" errors to the user
-Plugin 'vim-syntastic/syntastic'
-
-" Full path fuzzy file, buffer, mru, tag, ... finder for Vim
-Plugin 'kien/ctrlp.vim'
-
-" It's an interactive Unix filter for command-line that can be used with any
-" list; files, command history, processes, hostnames, bookmarks, git commits,
-" etc
-Plugin 'junegunn/fzf'
-
-" Command-T is a Vim plug-in that provides an extremely fast "fuzzy" mechanism
-" for Opening files and buffers Jumping to tags and help Running commands,
-" orprevious searches and commands with a minimal number of keystrokes.
-"Plugin 'wincent/command-t'
-
-" Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML
-" tags, and more
-Plugin 'tpope/vim-surround'
-
-" Comment stuff out
-Plugin 'tpope/vim-commentary'
-
-" ALE (Asynchronous Lint Engine) is a plugin for providing linting
-Plugin 'w0rp/ale'
-
-" Automated tag generation and syntax highlighting in Vim
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-
-" tagbar shows functions, variables and other identifiers in a split pane
-Plugin 'majutsushi/tagbar'
-
-" Neomake is a plugin for Vim/Neovim to asynchronously run programs.
-" You can use it instead of the built-in :make
-Plugin 'neomake/neomake'
-
-" VSCode/Sublime Text's awesome multiple selection feature into Vim
-Plugin 'terryma/vim-multiple-cursors'
-
-" Markdown / Writting
+" Markdown Support
 "Plugin 'reedes/vim-pencil'
-Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'               " Markdown / Writting
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'LanguageTool'
-
-" Language support
-Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'                     " Language support for go lang
 
 " Git Support
-Plugin 'kablamo/vim-git-log'
-Plugin 'gregsexton/gitv'
-" Git wrapper for Vim. It complements the command line interface to git, but
-" doesn�t aim to replace it
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'               " Git wrapper for Vim. It complements the command line interface to git,
+                                          "   but does not aim to replace it
+Plugin 'kablamo/vim-git-log'              " Git log support
+Plugin 'gregsexton/gitv'                  " Git support
 "Plugin 'jaxbot/github-issues.vim'
 
 " Theme / Interface
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'AnsiEsc.vim'
+
+" Command-T is a Vim plug-in that provides an extremely fast "fuzzy" mechanism
+" for Opening files and buffers Jumping to tags and help Running commands,
+" orprevious searches and commands with a minimal number of keystrokes.
+"Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,6 +97,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line"source $VIMRUNTIME/vimrc_example.vim
 "-------------------------------------------------------------
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" *** Bumdle Configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
