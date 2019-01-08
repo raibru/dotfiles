@@ -109,10 +109,12 @@ nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
-autocmd FileType twig imap <leader>a[ [{[  ]}]<ESC>Bhi
-
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
+"nmap ]h <Plug>GitGutterNextHunk
+"nmap [h <Plug>GitGutterPrevHunk
+nmap <leader>g] <Plug>GitGutterNextHunk
+nmap <leader>g[ <Plug>GitGutterPrevHunk
+nmap <leader>gg :GitGutterToggle<CR>
+nmap <leader>gv :Gitv<CR>
 
 " Sort lines
 nnoremap <leader>o vip:sort<cr>
@@ -138,7 +140,7 @@ nnoremap <leader>Y "+y
 nnoremap gv `[v`]
 
 " Clean trailing whitespace
-nnoremap <leader>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+nnoremap @@w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 " Select entire buffer
 nnoremap vaa ggvGg_
