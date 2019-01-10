@@ -125,9 +125,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
+###   ###
+
+export PATH=$PATH:~/bin
+
+export GOPATH=~/Projects/HomeWork.go
 export GOROOT=/usr/local/go
-export GOPATH=$HOME/Projects/HomeWork.go
-export PATH=$PATH:/usr/local/go/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOBIN
+
+export PYTHONPATH=$PYTHONPATH:~/.python
+
 # export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 #export LANG=de_DE.UTF-8
