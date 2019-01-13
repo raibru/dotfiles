@@ -54,7 +54,9 @@ augroup ft_markdown
     "au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown foldlevel=1
 
-    au Filetype markdown setlocal spell
+    "au Filetype markdown setlocal spell
+    au Filetype markdown setlocal textwidth=100
+    au Filetype markdown setlocal formatoptions+=t
 
     " Linkify selected text inline to contents of pasteboard.
     au Filetype markdown vnoremap <buffer> <localleader>l <esc>`>a]<esc>`<i[<esc>`>lla()<esc>"+P
@@ -100,3 +102,26 @@ augroup XML
     autocmd FileType xml setlocal foldmethod=syntax foldlevelstart=999 foldminlines=0
 augroup END
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Asciidoc Syntax Support
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup ft_asciidoc
+    au!
+
+    au BufNewFile,BufRead *.ad,*.adoc,*.asciidoc setlocal filetype=asciidoc foldlevel=1
+
+    "au Filetype asciidoc setlocal spell
+    au Filetype asciidoc setlocal textwidth=100
+    au Filetype asciidoc setlocal formatoptions+=t
+
+    " Linkify selected text inline to contents of pasteboard.
+    au Filetype asciidoc vnoremap <buffer> <localleader>l <esc>`>a]<esc>`<i[<esc>`>lla()<esc>"+P
+
+    " Use <localleader>1/2/3/4 to add headings.
+    au Filetype asciidoc nnoremap <buffer> <localleader>1 mzI=<space><esc>`zllll
+    au Filetype asciidoc nnoremap <buffer> <localleader>2 mzI==<space><esc>`zllll
+    au Filetype asciidoc nnoremap <buffer> <localleader>3 mzI===<space><esc>`zllll
+    au Filetype asciidoc nnoremap <buffer> <localleader>4 mzI====<space><esc>`zlllll
+augroup END
+
+" EOF
