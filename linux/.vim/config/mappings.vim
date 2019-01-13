@@ -21,6 +21,8 @@ map <C-S-down> :m+1<CR>
 map <C-S-PageUp> :bp<CR>
 map <C-S-PageDown> :bn<CR>
 
+nmap <F5> :redraw!<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unmap the arrow keys
 "no <down> ddp
