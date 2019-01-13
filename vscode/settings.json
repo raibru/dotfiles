@@ -30,15 +30,14 @@
     "window.enableMenuBarMnemonics": false,
     "editor.renderIndentGuides": true,
     "editor.showFoldingControls": "always",
+    "editor.lineNumbers": "relative",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f",
+        "statusBar.background": "#005F5F",
+        "statusBar.noFolderBackground": "#005F5F",
+        "statusBar.debuggingBackground": "#005F5F",
         "editorIndentGuide.activeBackground": "#5c5ada"
     },
-    "workbench.panel.location": "bottom",
     "workbench.activityBar.visible": true,
-    "editorIndentGuide.activeBackground": true,
     "[asciidoc]": {
         "editor.wordWrapColumn": 120,
         "editor.wordWrap": "wordWrapColumn",
@@ -47,10 +46,8 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.enabled": false,
     "gitlens.keymap": "none",
-    "gitlens.blame.annotation.activeLine": "off",
-    "gitlens.codeLens.visibility": "off",
-    "gitlens.blame.line.enabled": false,
-    "java.errors.incompleteClasspath.severity": "ignore",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -61,63 +58,88 @@
         "suppressResultsExplorerNotice": false,
         "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.historyExplorer.enabled": true,
     "markdown-pdf.executablePath": "C:\\Users\\r.brudna\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+    "java.errors.incompleteClasspath.severity": "ignore",
     "go.gopath": "~/Projects/HomeWork.go",
-    "vim.disableAnnoyingNeovimMessage": true,
-    "vim.easymotion": true,
+    //
+    // Vim configuration
+    //"vim.leader": "<space>",
+    "vim.leader": ",",
+    "vim.sneak": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
+            "before": [ "j", "j" ],
+            "after": [ "<Esc>" ]
+        },
     ],
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "<leader>", "d" ],
+            "after": [ "d", "d" ]
+        },
+        {
+            "before": [ "<C-n>" ],
+            "after": [],
+            "commands": [ { "command": ":nohl" } ]
+        },
+        {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [
-                "<leader>",
-                "d"
+                ">"
             ],
-            "after": [
-                "d",
-                "d"
+            "commands": [
+                "editor.action.indentLines"
             ]
         },
         {
             "before": [
-                "<C-n>"
+                "<"
             ],
-            "after": [],
             "commands": [
-                {
-                    "command": ":nohl"
-                }
+                "editor.action.outdentLines"
             ]
-        }
+        },
+
     ],
-    "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
     },
     "vim.statusBarColorControl": true,
-    "vim.statusBarColors": {
-        "normal": "#005f5f",
-        "insert": "#5f0000",
-        "visual": "#5f00af",
-        "visualline": "#005f87",
-        "visualblock": "#86592d",
-        "replace": "#000000"
-    },
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true
+    "vim.statusBarColors.normal": "#005F5F",
+    "vim.statusBarColors.insert": "#0033CC",
+    "vim.statusBarColors.visual": "#5F0000",
+    "vim.statusBarColors.visualline": "#5F0000",
+    "vim.statusBarColors.visualblock": "#5F0000",
+    "vim.statusBarColors.replace": "#0099FF",
+
+    //"vim.statusBarColors.normal": "#8FBCBB",
+    //"vim.statusBarColors": {
+    //    "normal": "#005f5f",
+    //    "insert": "#5f0000",
+    //    "visual": "#5f00af",
+    //    "visualline": "#005f87",
+    //    "visualblock": "#86592d",
+    //    "replace": "#000000"
+    //},
+    "vim.easymotion" : true,
+    "vim.surround" : true,
 }
