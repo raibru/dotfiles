@@ -70,6 +70,7 @@ Plugin 'tpope/vim-markdown'               " Markdown / Writting
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'LanguageTool'
 Plugin 'fatih/vim-go'                     " Language support for go lang
+Plugin 'suan/vim-instant-markdown'        " Instant Markdown preview from vim
 
 " Git Support
 Plugin 'tpope/vim-fugitive'               " Git wrapper for Vim. It complements the command line interface to git,
@@ -253,5 +254,19 @@ let g:gitgutter_signs = 1  " to turn on signs by default
 "let g:gitgutter_sign_removed = 'zz'
 "let g:gitgutter_sign_removed_first_line = '^^'
 "let g:gitgutter_sign_modified_removed = 'ww'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vimwiki settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown' }
+let g:vimwiki_ext2syntax = {'.mdw': 'markdown', '.mdwiki': 'markdown' }
+" helppage -> :h vimwiki-syntax
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-instant-markdown settings
+" Instant Markdown previews from Vim
+" https://github.com/suan/vim-instant-markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:instant_markdown_autostart = 0    " disable autostart
 
 " EOF
