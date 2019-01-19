@@ -43,6 +43,15 @@
         "editor.wordWrap": "wordWrapColumn",
         "editor.insertSpaces": true
     },
+    "files.associations": {
+        "*.mdw": "markdown",
+        "*.mdwiki": "markdown"
+    },
+    "[markdown]": {
+        "editor.wordWrapColumn": 120,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.insertSpaces": true
+    },
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.enabled": false,
     "gitlens.keymap": "none",
