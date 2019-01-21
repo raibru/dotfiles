@@ -204,4 +204,7 @@ nnoremap <m-left> :vertical resize -3<cr>
 nnoremap <m-up> :resize +3<cr>
 nnoremap <m-down> :resize -3<cr>
 
+" Instant Markdown preview
+map <leader>md :InstantMarkdownPreview<CR>
+
 " EOF
