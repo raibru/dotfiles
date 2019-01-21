@@ -207,4 +207,8 @@ nnoremap <m-down> :resize -3<cr>
 " Instant Markdown preview
 map <leader>md :InstantMarkdownPreview<CR>
 
+" Pandoc markdown html
+nmap <leader>mc   :RunSilent pandoc -o ~/.vim/tmp/vim-pandoc-out.html %<CR>
+nmap <leader>mv   :RunSilent /usr/bin/google-chrome-stable ~/.vim/tmp/vim-pandoc-out.html<CR>
+
 " EOF
