@@ -1,25 +1,8 @@
 // Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
 [
-  {
-    "key": "ctrl+shift+e",
-    "command": "workbench.view.explorer"
-  },
-  {
-    "key": "ctrl+- n",
-    "command": "workbench.view.explorer"
-  },
-  {
-    "key": "ctrl+shift+f",
-    "command": "workbench.view.search"
-  },
-  {
-    "key": "ctrl+shift+g",
-    "command": "workbench.view.scm"
-  },
-  {
-    "key": "ctrl+shift+d",
-    "command": "workbench.view.debug"
-  },
+    //
+    // have to check
+    //
   {
     "key": "ctrl+- s",
     "command": "workbench.action.splitEditor",
@@ -43,16 +26,6 @@
   {
     "key": "ctrl+- z o",
     "command": "editor.unfold",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+- m m",
-    "command": "bookmarks.toggle",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+- m l",
-    "command": "bookmarks.list",
     "when": "editorTextFocus"
   },
   {
@@ -91,14 +64,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+- p f",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "ctrl+- p t",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
     "key": "ctrl+- e",
     "command": "workbench.action.terminal.runSelectedText"
   },
@@ -106,6 +71,9 @@
     "key": "ctrl+- -",
     "command": "workbench.action.toggleMaximizedPanel"
   },
+    //
+    // -----
+    //
   {
     "key": "alt+k",
     "command": "better-line-select.downward"
@@ -118,5 +86,38 @@
     "key": "ctrl+shift+e",
     "command": "workbench.action.files.revert",
     "when": "editorTextFocus"
-  }
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+m",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+k ctrl+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "workbench.view.search"
+  },
+  {
+    "key": "ctrl+k ctrl+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+k ctrl+x",
+    "command": "workbench.extensions.action.showInstalledExtensions"
+  },
+  {
+    "key": "ctrl+e ctrl+e",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
 ]
