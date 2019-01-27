@@ -30,5 +30,6 @@ source ~/.vim/syntax/gitrebase.vim
 source ~/.vim/syntax/nginx.vim
 source ~/.vim/syntax/md.vim
 source ~/.vim/syntax/yaml.vim
+source ~/.vim/syntax/mot.vim
 
 " EOF
