@@ -74,8 +74,8 @@ augroup END
 augroup ft_go
     au!
 
-    au FileType go setlocal shiftwidth=8
-    au FileType go setlocal foldmethod=syntax
+    au FileType go setlocal shiftwidth=4
+    "au FileType go setlocal foldmethod=syntax
     au FileType go nnoremap <buffer> <silent> M :GoDoc<cr>
 
     " this language is incredible
