@@ -16,10 +16,10 @@ map @@l !%xmllint --format --recover -^M
 
 map <C-Down> <C-E>
 map <C-Up> <C-Y>
-map <C-S-up> :m-2<CR>
-map <C-S-down> :m+1<CR>
-map <C-S-PageUp> :bp<CR>
-map <C-S-PageDown> :bn<CR>
+map <M-up> :m-2<CR>
+map <M-down> :m+1<CR>
+map <M-PageUp> :bp<CR>
+map <M-PageDown> :bn<CR>
 
 nmap <F5> :redraw!<CR>
 
@@ -199,10 +199,10 @@ nnoremap <leader>j mzvipJ`z
 " Window Resizing {{{
 " right/up : bigger
 " left/down : smaller
-nnoremap <m-right> :vertical resize +3<cr>
-nnoremap <m-left> :vertical resize -3<cr>
-nnoremap <m-up> :resize +3<cr>
-nnoremap <m-down> :resize -3<cr>
+nnoremap <C-S-right> :vertical resize +3<cr>
+nnoremap <C-S-left> :vertical resize -3<cr>
+nnoremap <C-S-up> :resize +3<cr>
+nnoremap <C-S-down> :resize -3<cr>
 
 " Instant Markdown preview
 map <leader>md :InstantMarkdownPreview<CR>
