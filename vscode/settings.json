@@ -29,7 +29,7 @@
     "telemetry.enableCrashReporter": false,
     // Aktivieren Sie das Senden von Nutzungsdaten und Fehlern an Microsoft.
     "telemetry.enableTelemetry": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "window.menuBarVisibility": "default",
     "window.enableMenuBarMnemonics": false,
     "workbench.colorTheme": "Wombat",
