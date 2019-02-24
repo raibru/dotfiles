@@ -97,24 +97,32 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+k ctrl+m",
+    "key": "ctrl+b ctrl+m",
     "command": "workbench.view.scm"
   },
   {
-    "key": "ctrl+k ctrl+e",
+    "key": "ctrl+b ctrl+e",
     "command": "workbench.view.explorer"
   },
   {
-    "key": "ctrl+k ctrl+f",
+    "key": "ctrl+b ctrl+f",
     "command": "workbench.view.search"
   },
   {
-    "key": "ctrl+k ctrl+d",
+    "key": "ctrl+b ctrl+d",
     "command": "workbench.view.debug"
   },
   {
-    "key": "ctrl+k ctrl+x",
+    "key": "ctrl+b ctrl+x",
     "command": "workbench.extensions.action.showInstalledExtensions"
+  },
+  {
+    "key": "ctrl+b ctrl+p",
+    "command": "workbench.view.extension.project-manager"
+  },
+  {
+    "key": "ctrl+b ctrl+g",
+    "command": "workbench.view.extension.gitlens"
   },
   {
     "key": "ctrl+e ctrl+e",
