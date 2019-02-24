@@ -16,10 +16,8 @@ map @@l !%xmllint --format --recover -^M
 
 map <C-Down> <C-E>
 map <C-Up> <C-Y>
-map <C-S-PageUp> :bp<CR>
-map <C-S-PageDown> :bn<CR>
-"map <C-S-up> :m-2<CR>
-"map <C-S-down> :m+1<CR>
+map <M-PageUp> :bp<CR>
+map <M-PageDown> :bn<CR>
 map <M-up> :m-2<CR>
 map <M-down> :m+1<CR>
 
