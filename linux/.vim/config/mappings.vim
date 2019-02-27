@@ -126,6 +126,8 @@ nmap <leader>g[ <Plug>GitGutterPrevHunk
 nmap <leader>gg :GitGutterToggle<CR>
 nmap <leader>gv :Gitv<CR>
 
+nmap <leader>u :UndotreeToggle<CR>
+
 " Sort lines
 nnoremap <leader>o vip:sort<cr>
 vnoremap <leader>o :sort<cr>

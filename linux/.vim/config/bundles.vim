@@ -54,6 +54,11 @@ Plugin 'terryma/vim-multiple-cursors'     " VSCode/Sublime Text's awesome multip
 Plugin 'Raimondi/delimitMate'             " This plug-in provides automatic closing of quotes, parenthesis, brackets,
                                           "   etc., besides some other related features
 "Plugin 'nathanaelkane/vim-indent-guides' " Indent Guides is a plugin for visually displaying indent levels in Vim
+Plugin 'mbbill/undotree'                  " The undo history visualizer for VIM and makes it easier to browse and
+                                          "   switch between different undo branches.
+Plugin 'godlygeek/tabular'                " Vim script for text filtering and alignment. abularize lets you align
+                                          "   statements on their equal signs and other characters
+Plugin 'Shougo/neocomplete.vim'           " Neocomplete is an autocomplete plugin with additional support for snippets
 
 " Lint Support
 Plugin 'vim-syntastic/syntastic'          " Syntastic is a syntax checking plugin and runs files through external
@@ -245,7 +250,8 @@ let g:go_fmt_command = "goimports"
 "GitGutterChangeDeleteLine " default: links to GitGutterChangeLineDefault, i.e. DiffChange
 
 let g:gitgutter_highlight_lines = 0 " to turn off line highlighting by default
-let g:gitgutter_signs = 1  " to turn on signs by default
+let g:gitgutter_signs           = 1 " to turn on signs by default
+let g:gitgutter_enabled         = 0 " Set gitgutter at start off
 
 "let g:gitgutter_sign_modified = '≈ '
 "let g:gitgutter_sign_removed = '⌐ '
@@ -268,5 +274,22 @@ let g:vimwiki_ext2syntax = {'.mdw': 'markdown', '.mdwiki': 'markdown' }
 " https://github.com/suan/vim-instant-markdown
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:instant_markdown_autostart = 0    " disable autostart
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tabularize
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"<Leader>a= :Tabularize /=<CR>
+"<Leader>a: :Tabularize /:<CR>
+"<Leader>a:: :Tabularize /:\zs<CR>
+"<Leader>a, :Tabularize /,<CR>
+"<Leader>a<Bar> :Tabularize /<Bar><CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Neocomplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:acp_enableAtStartup = 0                             " Disable AutoComplPop
+let g:neocomplete#enable_at_startup = 0                   " Use neocomplete
+let g:neocomplete#enable_smart_case = 1                   " Use smartcase
+let g:neocomplete#sources#syntax#min_keyword_length = 3   " Set minimum syntax keyword length
 
 " EOF
