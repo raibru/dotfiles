@@ -50,7 +50,7 @@
     "terminal.integrated.cursorStyle": "block",
     "markdown-pdf.executablePath": "C:\\Users\\r.brudna\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
     "java.errors.incompleteClasspath.severity": "ignore",
-    "go.gopath": "~/Projects/HomeWork.go",
+    //"go.gopath": "~/Projects/HomeWork.go",
     "[asciidoc]": {
         "editor.wordWrapColumn": 120,
         "editor.wordWrap": "wordWrapColumn",
