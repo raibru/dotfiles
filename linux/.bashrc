@@ -105,6 +105,8 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+alias mdw='vi ~/Dokumente/mdwiki/index.mdw'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -129,10 +131,11 @@ fi
 
 export PATH=$PATH:~/bin
 
-export GOPATH=~/Projects/HomeWork.go
+export GOPATH=~/Projects/share/go
 export GOROOT=/usr/local/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin:$GOBIN
+export GOCACHE=~/.cache/go-build
 
 export PYTHONPATH=$PYTHONPATH:~/.python
 
