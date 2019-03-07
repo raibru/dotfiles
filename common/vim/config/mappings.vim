@@ -3,6 +3,14 @@
 "
 "custom mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => change behaviour of <ESC> handling to get out of 
+"    insert-mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"inoremap jk <ESC>
+"inoremap kj <ESC>
+"inoremap <ESC> <Nop>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => toggle between clang header and source
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "nmap <c-s> :call SwitchSourceHeader()<CR>
@@ -25,14 +33,14 @@ nmap <F5> :redraw!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unmap the arrow keys
+ino <down> <Nop>
+ino <up> <Nop>
+"ino <right> <Nop>
+"ino <left> <Nop>
 "no <down> ddp
 "no <left> <Nop>
 "no <right> <Nop>
 "no <up> ddkP
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
 "vno <down> <Nop>
 "vno <left> <Nop>
 "vno <right> <Nop>
