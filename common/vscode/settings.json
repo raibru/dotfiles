@@ -1,6 +1,6 @@
 // Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
 {
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "extensions.autoUpdate": false,
     // "terminal.external.windowsExec": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
     // Most Commonly Used
