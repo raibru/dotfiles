@@ -132,7 +132,7 @@ fi
 export PATH=$PATH:~/bin
 
 export GOPATH=~/Projects/share/go
-export GOROOT=/usr/local/go
+export GOROOT=/opt/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 export GOCACHE=~/.cache/go-build
