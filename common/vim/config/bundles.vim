@@ -41,6 +41,7 @@ Plugin 'kien/ctrlp.vim'                   " Full path fuzzy file, buffer, mru, t
 Plugin 'junegunn/fzf'                     " It's an interactive Unix filter for command-line that can
                                           "   be used with any list; files, command history, processes,
                                           "   hostnames, bookmarks, git commits, etc
+Plugin 'mileszs/ack.vim'                  " Run your favorite search tool from Vim, with an enhanced results list
 Plugin 'tpope/vim-surround'               " Surround.vim is all about 'surroundings': parentheses, brackets,
                                           "   quotes, XML tags, and more
 Plugin 'tpope/vim-commentary'             " Comment stuff out gcc to comment out a line (takes a count)
@@ -291,5 +292,12 @@ let g:acp_enableAtStartup = 0                             " Disable AutoComplPop
 let g:neocomplete#enable_at_startup = 0                   " Use neocomplete
 let g:neocomplete#enable_smart_case = 1                   " Use smartcase
 let g:neocomplete#sources#syntax#min_keyword_length = 3   " Set minimum syntax keyword length
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ack settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " EOF
