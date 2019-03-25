@@ -37,8 +37,8 @@ Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
 " Utility
 Plugin 'scrooloose/nerdtree'              " NERDTree is a file system explorer for the Vim editor
 Plugin 'vim-airline/vim-airline'          " Lean & mean status/tabline for vim that's light as air
-Plugin 'kien/ctrlp.vim'                   " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
-Plugin 'junegunn/fzf'                     " It's an interactive Unix filter for command-line that can
+Plugin 'junegunn/fzf', { 'do': './fzf --all' }
+Plugin 'junegunn/fzf.vim'                 " It's an interactive Unix filter for command-line that can
                                           "   be used with any list; files, command history, processes,
                                           "   hostnames, bookmarks, git commits, etc
 Plugin 'mileszs/ack.vim'                  " Run your favorite search tool from Vim, with an enhanced results list
@@ -67,7 +67,6 @@ Plugin 'vim-syntastic/syntastic'          " Syntastic is a syntax checking plugi
 Plugin 'w0rp/ale'                         " ALE (Asynchronous Lint Engine) is a plugin for providing linting
 
 " Docomentation Support
-" VimWiki
 Plugin 'vimwiki/vimwiki'                  " Vimwiki is a personal wiki for Vim -- a number of linked text files
                                           "   that have their own syntax highlighting
 " Markdown Support
@@ -87,7 +86,7 @@ Plugin 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff 
                                           " each line has been added, modified, and where lines have been removed
 "Plugin 'jaxbot/github-issues.vim'
 
-" Theme / Interface
+" Colors
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'AnsiEsc.vim'
@@ -122,6 +121,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
+let NERDTreeIgnore=['\~$', '\.swp$', '\.git', '\.svn', '\.cache']
 " NERDTree open automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
@@ -163,19 +163,6 @@ let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 " " let g:syntastic_enable_elixir_checker = 1
 " " let g:syntastic_elixir_checkers = ["elixir"]
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => CtrlP settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
-" Use the nearest .git directory as the cwd
-" This makes a lot of sense if you are working on a project that is in version
-" control. It also supports works with .svn, .hg, .bzr.
-let g:ctrlp_working_path_mode = 'r'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ale settings
@@ -228,7 +215,6 @@ let g:easytags_events = ['BufWritePost']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagbar settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"nmap <C-l>  :TagbarToggle<CR>
 nmap <leader>t  :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -298,6 +284,44 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3   " Set minimum syntax k
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
+  let &grepprg = 'ag --nogroup --nocolor --column'
+else
+  let &grepprg = 'grep -rn $* *'
 endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => FZF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+let g:fzf_action = {
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Default fzf layout
+" " - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+"let g:fzf_history_dir = '~/.local/share/fzf-history'
+"
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
 " EOF

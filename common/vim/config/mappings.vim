@@ -18,9 +18,12 @@
 nnoremap <leader>s :call SwitchSourceHeader()<CR>
 "nmap <s :call SwitchSourceHeader()<CR>
 
-map @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
-map @@r :%s/\r//g<CR>
-map @@l !%xmllint --format --recover -^M
+nnoremap @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
+nnoremap @@r :%s/\r//g<CR>
+nnoremap @@l !%xmllint --format --recover -^M
+" Clean trailing whitespace
+nnoremap @@w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
 
 map <C-Down> <C-E>
 map <C-Up> <C-Y>
@@ -47,20 +50,6 @@ ino <up> <Nop>
 "vno <up> <Nop>
 
 "============== Custom Mappings ===============
-" tabs mapping have to check: I not working with tabs
-"open tag in new tab
-"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-"nmap <C-Tab> :tabnext<CR>
-"nmap <C-S-Tab> :tabprevious<CR>
-"map <C-S-Tab> :tabprevious<CR>
-"map <C-Tab> :tabnext<CR>
-"imap <C-S-Tab> <ESC>:tabprevious<CR>
-"imap <C-Tab> <ESC>:tabnext<CR>
-"noremap <F7> :set expandtab!<CR>
-"nmap <Leader>h :tabnew %:h<CR>
-
-"turn off search highlighting
-nmap <C-n> :noh<CR>
 
 " custom comma motion mapping
 " delete command dd is not working correct only after hit esc line is deleted
@@ -81,13 +70,17 @@ nmap <C-n> :noh<CR>
 "noremap ds) F(xf)x
 "noremap cs) F(xf)xi
 
-" CTRL-P mappings
-" Use a leader instead of the actual named binding
-nmap <leader>p :CtrlP<cr>
-" Easy bindings for its various modes
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>
+"turn off search highlighting
+nmap <C-n> :noh<CR>
+
+" FZF mappings
+nnoremap <silent><leader>ff :Files<cr>
+nnoremap <silent><leader>fb :Buffers<cr>
+nnoremap <silent><leader>fh :History<cr>
+nnoremap <silent><leader>fl :Lines<cr>
+nnoremap <silent><leader>fc :BLines<cr>
+nnoremap <silent><leader>ag :Ag <C-R><C-W><cr>
+nnoremap <silent><leader>AG :Ag <C-R><C-A><cr>
 
 nmap cu ct_
 nmap cU cf_
@@ -127,6 +120,13 @@ nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
+"===============================================================================
+" Git/Fugitive
+"===============================================================================
+nnoremap <Leader>gb :Gblame<cr>
+nnoremap <Leader>gd :Gdiff<cr>
+nnoremap <Leader>gs :Gstatus<cr>
+
 "nmap ]h <Plug>GitGutterNextHunk
 "nmap [h <Plug>GitGutterPrevHunk
 nmap <leader>g] <Plug>GitGutterNextHunk
@@ -140,9 +140,7 @@ nmap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>o vip:sort<cr>
 vnoremap <leader>o :sort<cr>
 
-" Buffer/Tabs
-""nnoremap <leader>( :tabprev<cr>
-""nnoremap <leader>) :tabnext<cr>
+" Buffer
 nnoremap <leader>( :bp<cr>
 nnoremap <leader>) :bn<cr>
 nnoremap <leader>= :ls<cr>
@@ -158,9 +156,6 @@ nnoremap <leader><leader>Y "+y
 
 " Reselect last-pasted text
 nnoremap gv `[v`]
-
-" Clean trailing whitespace
-nnoremap @@w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 " Select entire buffer
 nnoremap vaa ggvGg_
