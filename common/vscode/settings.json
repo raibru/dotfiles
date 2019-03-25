@@ -473,4 +473,6 @@
     "vim.foldfix": true,
     "vim.easymotion": true,
     "vim.surround": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
