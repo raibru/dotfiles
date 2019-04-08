@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#
+#
+
+tmux new-session -d -s system -n overview -d gotop
+tmux split-window -h -p50 -d htop
+tmux attach -t system
+
+# EOF
