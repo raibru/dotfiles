@@ -24,6 +24,16 @@
     // When I accidentally hit copy without selecting anything and it overrides my clipboard - ugh.
     "editor.emptySelectionClipboard": false,
     "editor.formatOnPaste": true,
+    // Controls if quick suggestions should show up while typing
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    // Controls the delay in ms after which quick suggestions will show up.
+    "editor.quickSuggestionsDelay": 1500,
+    // Controls if suggestions should automatically show up when typing trigger characters
+    "editor.suggestOnTriggerCharacters": false,
     // Enable crash reports to be sent to Microsoft.
     // This option requires restart to take effect.
     "telemetry.enableCrashReporter": false,
