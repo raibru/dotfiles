@@ -24,7 +24,7 @@ MS-CEINTL.vscode-language-pack-de
 ms-vscode.Theme-1337
 ms-vscode.cpptools
 ms-vscode.Go
-ms-vscode.PowerShell
+ms-vscode.powershell
 ms-vscode.Theme-MarkdownKit
 PeterJausovec.vscode-docker
 PKief.markdown-checkbox
