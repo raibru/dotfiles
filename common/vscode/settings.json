@@ -1,6 +1,11 @@
 // Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
 {
+    // Enable crash reports to be sent to Microsoft.
+    // This option requires restart to take effect.
+    "telemetry.enableCrashReporter": false,
+    // Aktivieren Sie das Senden von Nutzungsdaten und Fehlern an Microsoft.
     "extensions.ignoreRecommendations": true,
+    //
     "extensions.autoUpdate": false,
     // "terminal.external.windowsExec": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
     // Most Commonly Used
@@ -20,7 +25,7 @@
     "editor.minimap.enabled": false,
     "editor.renderIndentGuides": true,
     "editor.showFoldingControls": "always",
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     // When I accidentally hit copy without selecting anything and it overrides my clipboard - ugh.
     "editor.emptySelectionClipboard": false,
     "editor.formatOnPaste": true,
@@ -34,12 +39,8 @@
     "editor.quickSuggestionsDelay": 1500,
     // Controls if suggestions should automatically show up when typing trigger characters
     "editor.suggestOnTriggerCharacters": false,
-    // Enable crash reports to be sent to Microsoft.
-    // This option requires restart to take effect.
-    "telemetry.enableCrashReporter": false,
-    // Aktivieren Sie das Senden von Nutzungsdaten und Fehlern an Microsoft.
     "telemetry.enableTelemetry": false,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0.4,
     "window.menuBarVisibility": "default",
     "window.enableMenuBarMnemonics": false,
     "workbench.colorTheme": "Wombat",
@@ -47,10 +48,10 @@
     "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": true,
     "workbench.colorCustomizations": {
-        "editorIndentGuide.activeBackground": "#5c5ada",
         "statusBar.background": "#005F5F",
         "statusBar.noFolderBackground": "#005F5F",
-        "statusBar.debuggingBackground": "#005F5F"
+        "statusBar.debuggingBackground": "#005F5F",
+        "editorIndentGuide.activeBackground": "#5c5ada"
     },
     //"terminal.external.windowsExec": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
     //"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
@@ -60,7 +61,6 @@
     "terminal.integrated.cursorStyle": "block",
     "markdown-pdf.executablePath": "C:\\Users\\r.brudna\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
     "java.errors.incompleteClasspath.severity": "ignore",
-    //"go.gopath": "~/Projects/HomeWork.go",
     "[asciidoc]": {
         "editor.wordWrapColumn": 120,
         "editor.wordWrap": "wordWrapColumn",
@@ -89,400 +89,5 @@
     "fileutils.delete.useTrash": true,
     "fileutils.delete.confirm": true,
     "fileutils.typeahead.exclude": {
-    },
-
-    //
-    // Vim configuration
-    //"vim.leader": "<space>",
-    "vim.leader": ",",
-    "vim.sneak": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-       // Change behaviour of <ESC> handling to get out of insert-mode
-       // use in snc with vim mappings
-       // {
-       //     "before": [
-       //         "j",
-       //         "k"
-       //     ],
-       //     "after": [
-       //         "<Esc>"
-       //     ]
-       // },
-       // {
-       //     "before": [
-       //         "k",
-       //         "j"
-       //     ],
-       //     "after": [
-       //         "<Esc>"
-       //     ]
-       // },
-       // {
-       //     "before": [
-       //         "<Esc>"
-       //     ],
-       //     "after": [
-       //         "<Nop>"
-       //     ]
-       // },
-        {
-            "before": [
-                "<Down>"
-            ],
-            "after": [
-                "<Nop>"
-            ]
-        },
-        {
-            "before": [
-                "<Up>"
-            ],
-            "after": [
-                "<Nop>"
-            ]
-        },
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": ":nohl"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "m"
-            ],
-            "commands": [
-                "bookmarks.toggle"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b",
-                "l"
-            ],
-            "commands": [
-                "bookmarks.list"
-            ]
-        },
-        {
-            "before": ["<leader>", "p"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.quickOpen"
-                }
-            ]
-        },
-        {
-            "before": ["<leader>", "n"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.view.explorer"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "1"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusFirstEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "2"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusSecondEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "3"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusThirdEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "4"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusFourthEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "5"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusFifthEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "6"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusSixthEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "7"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusSeventhEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "8"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusEighthEditorGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b",
-                "b"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.showAllEditors",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b",
-                "d"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b",
-                "n"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.nextEditor",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b",
-                "p"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.previousEditor",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e",
-                "n"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.marker.next",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e",
-                "p"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.marker.previous",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f",
-                "f"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.openFile",
-                    "args": [],
-                    "when": "!isMac"
-                },
-                {
-                    "command": "workbench.action.files.openFileFolder",
-                    "args": [],
-                    "when": "isMac"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "i",
-                "s"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.insertSnippet",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "j",
-                "="
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.formatDocument",
-                    "args": []
-                }
-            ]
-        },
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-    ],
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
-    },
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": "#005F5F",
-    "vim.statusBarColors.insert": "#0033CC",
-    "vim.statusBarColors.visual": "#5F0000",
-    "vim.statusBarColors.visualline": "#5F0000",
-    "vim.statusBarColors.visualblock": "#5F0000",
-    "vim.statusBarColors.replace": "#0099FF",
-    //"vim.statusBarColors.normal": "#8FBCBB",
-    //"vim.statusBarColors": {
-    //    "normal": "#005f5f",
-    //    "insert": "#5f0000",
-    //    "visual": "#5f00af",
-    //    "visualline": "#005f87",
-    //    "visualblock": "#86592d",
-    //    "replace": "#000000"
-    //},
-    "vim.foldfix": true,
-    "vim.easymotion": true,
-    "vim.surround": true,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    }
 }
