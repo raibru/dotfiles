@@ -89,5 +89,6 @@
     "fileutils.delete.useTrash": true,
     "fileutils.delete.confirm": true,
     "fileutils.typeahead.exclude": {
-    }
+    },
+    "go.useLanguageServer": true
 }
