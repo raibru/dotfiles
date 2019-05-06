@@ -3,6 +3,13 @@
     //
     // -----
     //
+  // - goTestExplorer.focus
+  // - goTestExplorer.goToLocation
+  // - goTestExplorer.refreshTestExplorer
+  // - goTestExplorer.runAllTest
+  // - goTestExplorer.runTest
+  // - goTestExplorer.runTestSuite
+  // - goTestExplorer.showTestoutput
   {
     "key": "shift+alt+up",
     "command": "editor.action.copyLinesUpAction",
