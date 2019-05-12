@@ -95,12 +95,25 @@ __prompt_command() {
     local BBlu='\[\e[1;34m\]'
     local Pur='\[\e[0;35m\]'
 
-    PS1="${Gre}\u@\h:${BBlu}\w${Gre}$(__git_ps1)\n"
+	## 256 COLOR CODES
+	local NO_FORMAT="\[\033[0m\]"
+	local ORANGE_BOLD="\[\033[1;38;5;208m\]"
+	local TOXIC_GREEN_BOLD="\[\033[1;38;5;118m\]"
+	local RED_BOLD="\[\033[1;38;5;1m\]"
+	local CYAN_BOLD="\[\033[1;38;5;87m\]"
+	local BLACK_BOLD="\[\033[1;38;5;0m\]"
+	local WHITE_BOLD="\[\033[1;38;5;15m\]"
+	local GRAY_BOLD="\[\033[1;90m\]"
+	local BLUE_BOLD="\[\033[1;38;5;74m\]"
+
+	local TRIANGLE=$'\uE0B0'	
+
+    PS1="${BLUE_BOLD}\u@\h:${WHITE_BOLD}\w${ORANGE_BOLD}$(__git_ps1)\n"
 
     if [ $EXIT != 0 ]; then
-        PS1+="${Red}└─▶ \$ ${RCol}"      # Add red if exit code non 0
+        PS1+="${RED_BOLD}└─▶ \$ ${NO_FORMAT}"      # Add red if exit code non 0
     else
-        PS1+="${Gre}└─▶ \$ ${RCol}"
+        PS1+="${TOXIC_GREEN_BOLD}└─▶ \$ ${NO_FORMAT}"
     fi
 
     #PS1+="${RCol}@${BBlu}\h ${Pur}\W${BYel}$ ${RCol}"
