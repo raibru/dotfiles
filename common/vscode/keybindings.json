@@ -21,6 +21,16 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "alt+k",
     "command": "better-line-select.downward"
   },
