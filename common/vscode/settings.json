@@ -49,8 +49,10 @@
     "workbench.activityBar.visible": true,
     "workbench.colorCustomizations": {
         "statusBar.background": "#005F5F",
+        "statusBar.foreground": "#F3F5F5",
         "statusBar.noFolderBackground": "#005F5F",
-        "statusBar.debuggingBackground": "#005F5F",
+        "statusBar.debuggingBackground": "#F50B0B",
+        "statusBar.debuggingForeground": "#F3F5F5",
         "editorIndentGuide.activeBackground": "#5c5ada"
     },
     //"terminal.external.windowsExec": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
