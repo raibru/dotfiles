@@ -1,0 +1,96 @@
+// Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
+{
+    // Enable crash reports to be sent to Microsoft.
+    // This option requires restart to take effect.
+    "telemetry.enableCrashReporter": false,
+    // Aktivieren Sie das Senden von Nutzungsdaten und Fehlern an Microsoft.
+    "extensions.ignoreRecommendations": true,
+    //
+    "extensions.autoUpdate": false,
+    // "terminal.external.windowsExec": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    // Most Commonly Used
+    // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
+    "files.autoSave": "off",
+    "files.associations": {
+        "*.mdw": "markdown",
+        "*.mdwiki": "markdown"
+    },
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
+    "editor.renderWhitespace": "none",
+    "editor.snippetSuggestions": "top",
+    "editor.mouseWheelZoom": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": true,
+    "editor.showFoldingControls": "always",
+    "editor.lineNumbers": "on",
+    // When I accidentally hit copy without selecting anything and it overrides my clipboard - ugh.
+    "editor.emptySelectionClipboard": false,
+    "editor.formatOnPaste": true,
+    // Controls if quick suggestions should show up while typing
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    // Controls the delay in ms after which quick suggestions will show up.
+    "editor.quickSuggestionsDelay": 1500,
+    // Controls if suggestions should automatically show up when typing trigger characters
+    "editor.suggestOnTriggerCharacters": false,
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": 0.4,
+    "window.menuBarVisibility": "default",
+    "window.enableMenuBarMnemonics": false,
+    "workbench.colorTheme": "Wombat",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005F5F",
+        "statusBar.foreground": "#F3F5F5",
+        "statusBar.noFolderBackground": "#005F5F",
+        "statusBar.debuggingBackground": "#F50B0B",
+        "statusBar.debuggingForeground": "#F3F5F5",
+        "editorIndentGuide.activeBackground": "#5c5ada"
+    },
+    //"terminal.external.windowsExec": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    //"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.cursorStyle": "block",
+    "markdown-pdf.executablePath": "C:\\Users\\r.brudna\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "[asciidoc]": {
+        "editor.wordWrapColumn": 120,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.insertSpaces": true
+    },
+    "[markdown]": {
+        "editor.wordWrapColumn": 120,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.insertSpaces": true
+    },
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.keymap": "none",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "fileutils.delete.useTrash": true,
+    "fileutils.delete.confirm": true,
+    "fileutils.typeahead.exclude": {
+    },
+    "go.useLanguageServer": true
+}

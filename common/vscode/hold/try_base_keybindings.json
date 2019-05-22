@@ -1,0 +1,158 @@
+// Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
+[
+    //
+    // -----
+    //
+  // - goTestExplorer.focus
+  // - goTestExplorer.goToLocation
+  // - goTestExplorer.refreshTestExplorer
+  // - goTestExplorer.runAllTest
+  // - goTestExplorer.runTest
+  // - goTestExplorer.runTestSuite
+  // - goTestExplorer.showTestoutput
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "better-line-select.downward"
+  },
+  {
+    "key": "alt+j",
+    "command": "better-line-select.upward"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.action.files.revert",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+b ctrl+m",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+b ctrl+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+b ctrl+f",
+    "command": "workbench.view.search"
+  },
+  {
+    "key": "ctrl+b ctrl+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+b ctrl+x",
+    "command": "workbench.extensions.action.showInstalledExtensions"
+  },
+  {
+    "key": "ctrl+b ctrl+p",
+    "command": "workbench.view.extension.project-manager"
+  },
+  {
+    "key": "ctrl+b ctrl+g",
+    "command": "workbench.view.extension.gitlens"
+  },
+  {
+    "key": "ctrl+e ctrl+e",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+    //
+    // have to check
+    //
+    // {
+    //   "key": "ctrl+- s",
+    //   "command": "workbench.action.splitEditor",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- z X",
+    //   "command": "editor.foldAll",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- z O",
+    //   "command": "editor.unfoldAll",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- z x",
+    //   "command": "editor.fold",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- z o",
+    //   "command": "editor.unfold",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- c",
+    //   "command": "workbench.action.tasks.runTask",
+    //   "args": "Compile"
+    // },
+    // {
+    //   "key": "ctrl+- b",
+    //   "command": "workbench.action.tasks.runTask",
+    //   "args": "build",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- t",
+    //   "command": "workbench.action.tasks.runTask",
+    //   "args": "test",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- d",
+    //   "command": "workbench.action.tasks.runTask",
+    //   "args": "docs",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- r",
+    //   "command": "workbench.action.tasks.runTask",
+    //   "args": "run",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- x",
+    //   "command": "workbench.action.tasks.runTask",
+    //   "args": "Clean-Test",
+    //   "when": "editorTextFocus"
+    // },
+    // {
+    //   "key": "ctrl+- e",
+    //   "command": "workbench.action.terminal.runSelectedText"
+    // },
+    // {
+    //   "key": "ctrl+- -",
+    //   "command": "workbench.action.toggleMaximizedPanel"
+    // },
+  ]
