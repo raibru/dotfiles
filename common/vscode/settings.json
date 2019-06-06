@@ -76,6 +76,11 @@
     //
     //
     //
+    "merge-conflict.diffViewPosition": "Below",
+
+    //
+    //
+    //
     "markdown-pdf.executablePath": "C:\\Users\\r.brudna\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
     "java.errors.incompleteClasspath.severity": "ignore",
     "[asciidoc]": {
