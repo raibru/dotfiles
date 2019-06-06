@@ -50,7 +50,7 @@
     //
     //
     //
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": true,
     "workbench.colorTheme": "Wombat",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "left",
@@ -58,10 +58,21 @@
     "workbench.colorCustomizations": {
         "statusBar.debuggingForeground": "#f3f5f5",
         "editorIndentGuide.activeBackground": "#5c5ada",
-        "statusBar.background": "#005F5F",
-        "statusBar.noFolderBackground": "#005F5F",
-        "statusBar.debuggingBackground": "#005F5F"
+        "tab.activeBackground": "#753238",
+        "tab.activeForeground": "#ffffff",
+        "tab.inactiveBackground": "#5e5858",
+        "tab.inactiveForeground": "#ffffff",
+        "tab.unfocusedActiveBackground": "#685050",
+        "tab.border": "#000000",
+        "editorGroupHeader.tabsBorder": "#ff0000",
+        "editorGroupHeader.tabsBackground": "#5e5858",
+        "editorGroupHeader.tabs": "#ff0000",
+        "editorPane.background": "#ff0000",
+        "statusBar.background": "#005F87",
+        "statusBar.noFolderBackground": "#005F87",
+        "statusBar.debuggingBackground": "#005F87"
     },
+
     
     //
     //
@@ -238,4 +249,5 @@
             "commands": [ "editor.action.outdentLines" ]
         },
     ],
+    "breadcrumbs.enabled": false,
 }
