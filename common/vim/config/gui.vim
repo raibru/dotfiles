@@ -39,17 +39,17 @@ if has("gui_running")
   if has('win32') || has('win64')
     "set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
     "set guifont=DejaVu_Sans_Mono:h12:cANSI
-    set guifont=Consolas:h10:cANSI
+    set guifont=Consolas:h11:cANSI
   elseif has("mac") || has("macunix")
     "set gfn=IBM\ Plex\ Mono:h14,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
   elseif has("gui_gtk2")
-    set guifont=DejaVu\ Sans\ Mono\ 10
+    set guifont=DejaVu\ Sans\ Mono\ 11
     "set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
   elseif has("linux")
-    set guifont=DejaVu\ Sans\ Mono\ 10
+    set guifont=DejaVu\ Sans\ Mono\ 11
     "set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
   elseif has("unix")
-    set gfn=Monospace\ 10
+    set gfn=Monospace\ 11
   endif
 
   "
