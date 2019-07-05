@@ -53,6 +53,11 @@
         "when": "!terminalFocus"
       },
       {
+        "key": "alt+s",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+      },
+      {
         "key": "ctrl+b ctrl+m",
         "command": "workbench.view.scm"
       },

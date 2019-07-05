@@ -51,10 +51,11 @@
     //
     //
     "workbench.editor.showTabs": true,
-    "workbench.colorTheme": "Wombat",
+    "workbench.colorTheme": "PowerShell ISE",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": true,
+    "workbench.tree.renderIndentGuides": "always",
     "workbench.colorCustomizations": {
         "statusBar.debuggingForeground": "#f3f5f5",
         "editorIndentGuide.activeBackground": "#5c5ada",
@@ -68,9 +69,9 @@
         "editorGroupHeader.tabsBackground": "#5e5858",
         "editorGroupHeader.tabs": "#ff0000",
         "editorPane.background": "#ff0000",
-        "statusBar.background": "#005F87",
-        "statusBar.noFolderBackground": "#005F87",
-        "statusBar.debuggingBackground": "#005F87"
+        "statusBar.background": "#005F5F",
+        "statusBar.noFolderBackground": "#005F5F",
+        "statusBar.debuggingBackground": "#005F5F"
     },
 
     
