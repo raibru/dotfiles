@@ -51,7 +51,7 @@
     //
     //
     "workbench.editor.showTabs": true,
-    "workbench.colorTheme": "PowerShell ISE",
+    "workbench.colorTheme": "Wombat",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": true,
