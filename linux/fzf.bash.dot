@@ -1,0 +1,17 @@
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == */home/rbr/Projects/FromGitHub/fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/home/rbr/Projects/FromGitHub/fzf/bin"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/home/rbr/Projects/FromGitHub/fzf/shell/completion.bash" 2> /dev/null
+
+# Key bindings
+# ------------
+source "/home/rbr/Projects/FromGitHub/fzf/shell/key-bindings.bash"
+
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+#EOF
