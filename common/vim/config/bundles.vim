@@ -49,47 +49,53 @@ Plugin 'xolox/vim-misc'                   " Automated tag generation and syntax 
 Plugin 'xolox/vim-easytags'               " need xolos/vim-misc
 Plugin 'majutsushi/tagbar'                " tagbar shows functions, variables and other identifiers in a split pane
 Plugin 'easymotion'                       " EasyMotion provides a much simpler way to use some motions in vim
-Plugin 'neomake/neomake'                  " Neomake is a plugin for Vim/Neovim to asynchronously run programs.
-                                          "   You can use it instead of the built-in :make
-Plugin 'terryma/vim-multiple-cursors'     " VSCode/Sublime Text's awesome multiple selection feature into Vim
 Plugin 'Raimondi/delimitMate'             " This plug-in provides automatic closing of quotes, parenthesis, brackets,
                                           "   etc., besides some other related features
-"Plugin 'nathanaelkane/vim-indent-guides' " Indent Guides is a plugin for visually displaying indent levels in Vim
 Plugin 'mbbill/undotree'                  " The undo history visualizer for VIM and makes it easier to browse and
                                           "   switch between different undo branches.
 Plugin 'godlygeek/tabular'                " Vim script for text filtering and alignment. abularize lets you align
                                           "   statements on their equal signs and other characters
 Plugin 'Shougo/neocomplete.vim'           " Neocomplete is an autocomplete plugin with additional support for snippets
 
+"Plugin 'nathanaelkane/vim-indent-guides' " Indent Guides is a plugin for visually displaying indent levels in Vim
+
 " Lint Support
-Plugin 'vim-syntastic/syntastic'          " Syntastic is a syntax checking plugin and runs files through external
-                                          "   syntax checkers and displays any resulting errors to the user
 Plugin 'w0rp/ale'                         " ALE (Asynchronous Lint Engine) is a plugin for providing linting
+
+"Plugin 'vim-syntastic/syntastic'          " Syntastic is a syntax checking plugin and runs files through external
+"                                          "   syntax checkers and displays any resulting errors to the user
+"Plugin 'neomake/neomake'                  " Neomake is a plugin for Vim/Neovim to asynchronously run programs.
+"                                          "   You can use it instead of the built-in :make
+"Plugin 'terryma/vim-multiple-cursors'     " VSCode/Sublime Text's awesome multiple selection feature into Vim
 
 " Docomentation Support
 Plugin 'vimwiki/vimwiki'                  " Vimwiki is a personal wiki for Vim -- a number of linked text files
                                           "   that have their own syntax highlighting
 " Markdown Support
-"Plugin 'reedes/vim-pencil'
 Plugin 'tpope/vim-markdown'               " Markdown / Writting
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'LanguageTool'
-Plugin 'fatih/vim-go'                     " Language support for go lang
 Plugin 'suan/vim-instant-markdown'        " Instant Markdown preview from vim
+"Plugin 'reedes/vim-pencil'
 
 " Git Support
 Plugin 'tpope/vim-fugitive'               " Git wrapper for Vim. It complements the command line interface to git,
                                           "   but does not aim to replace it
 Plugin 'kablamo/vim-git-log'              " Git log support
-Plugin 'gregsexton/gitv'                  " The goal is to give you a similar set of functionality as a repository viewer support
 Plugin 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the 'gutter' (sign column). It shows whether
                                           " each line has been added, modified, and where lines have been removed
+"Plugin 'gregsexton/gitv'                  " Has not any mantainence now. The goal is to give you a similar set of functionality as a repository viewer support
 "Plugin 'jaxbot/github-issues.vim'
 
 " Colors
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'AnsiEsc.vim'
+
+" Language support
+Plugin 'fatih/vim-go'                     " Language support for go lang
+"Plugin 'govim/govim'                     " Go development plugin for Vim8, much like vim-go. But unlike vim-go, govim is written
+                                          " in Go, not VimScript
 
 " Command-T is a Vim plug-in that provides an extremely fast "fuzzy" mechanism
 " for Opening files and buffers Jumping to tags and help Running commands,
@@ -126,22 +132,21 @@ let NERDTreeIgnore=['\~$', '\.swp$', '\.git', '\.svn', '\.cache']
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-nmap <leader>n :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_use_default_mapping=0
-
-" Default mapping
-let g:multi_cursor_start_word_key      = '<C-s>'
-let g:multi_cursor_select_all_word_key = '<A-s>'
-let g:multi_cursor_start_key           = 'g<C-s>'
-let g:multi_cursor_select_all_key      = 'g<A-s>'
-let g:multi_cursor_next_key            = '<C-s>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
+"let g:multi_cursor_use_default_mapping=0
+"
+"" Default mapping
+"let g:multi_cursor_start_word_key      = '<C-s>'
+"let g:multi_cursor_select_all_word_key = '<A-s>'
+"let g:multi_cursor_start_key           = 'g<C-s>'
+"let g:multi_cursor_select_all_key      = 'g<A-s>'
+"let g:multi_cursor_next_key            = '<C-s>'
+"let g:multi_cursor_prev_key            = '<C-p>'
+"let g:multi_cursor_skip_key            = '<C-x>'
+"let g:multi_cursor_quit_key            = '<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
@@ -153,16 +158,16 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" " let g:syntastic_enable_elixir_checker = 1
-" " let g:syntastic_elixir_checkers = ["elixir"]
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"" let g:syntastic_check_on_wq = 0
+"" let g:syntastic_enable_elixir_checker = 1
+"" let g:syntastic_elixir_checkers = ["elixir"]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ale settings
@@ -172,6 +177,7 @@ let g:ale_linters = {
 \   'cpp': ['cppcheck'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
+"\   'go': ['gopls']
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
@@ -211,11 +217,6 @@ let g:easytags_events = ['BufWritePost']
 " let g:easytags_dynamic_files = 1
 " Disable automatic highlighting of tags
 " let g:easytags_auto_highlight = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => tagbar settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>t  :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-go

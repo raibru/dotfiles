@@ -18,7 +18,7 @@ set splitbelow
 set splitright
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set cursorline
+set cursorline
 "set showcmd
 "set ruler
 "set incsearch
@@ -156,5 +156,26 @@ noremap <C-l> <C-w>l
 set dictionary=/usr/share/dict/words
 set spellfile=~/.vim/spell/rbr.utf-8.add,~/.vim-local-dictionary.utf-8.add
 nnoremap zG 2zg
+
+"
+" GO extensions for vim. havte to find out how this works with _gopls_
+"let g:go_def_mode='gopls'
+"let g:go_info_mode='gopls'
+"
+" Suggestion: show info for completion candidates in a popup menu
+"set updatetime=500
+"set balloondelay=250
+"set signcolumn=yes
+"" will suffice, no autocmd required.
+"autocmd! BufEnter,BufNewFile *.go syntax on
+"autocmd! BufLeave *.go syntax off
+"set autoindent
+"set smartindent
+"filetype indent on
+"set backspace=2
+"if has("patch-8.1.1904")
+"  set completeopt+=popup
+"  set completepopup=align:menu,border:off,highlight:Pmenu
+"endif
 
 " EOF

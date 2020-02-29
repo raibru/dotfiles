@@ -58,29 +58,8 @@ ino <up> <Nop>
 "nmap da, f,ld2F,i,<ESC>l "delete argument 
 "nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
 
-" delete surrounding characters
-"noremap ds{ F{xf}x
-"noremap cs{ F{xf}xi
-"noremap ds" F"x,x
-"noremap cs" F"x,xi
-"noremap ds' F'x,x
-"noremap cs' F'x,xi
-"noremap ds( F(xf)x
-"noremap cs( F(xf)xi
-"noremap ds) F(xf)x
-"noremap cs) F(xf)xi
-
 "turn off search highlighting
 nmap <C-n> :noh<CR>
-
-" FZF mappings
-nnoremap <silent><leader>ff :Files<cr>
-nnoremap <silent><leader>fb :Buffers<cr>
-nnoremap <silent><leader>fh :History<cr>
-nnoremap <silent><leader>fl :Lines<cr>
-nnoremap <silent><leader>fc :BLines<cr>
-nnoremap <silent><leader>ag :Ag <C-R><C-W><cr>
-nnoremap <silent><leader>AG :Ag <C-R><C-A><cr>
 
 nmap cu ct_
 nmap cU cf_
@@ -120,6 +99,47 @@ nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>n :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FZF mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent><leader>ff :Files<cr>
+nnoremap <silent><leader>fb :Buffers<cr>
+nnoremap <silent><leader>fh :History<cr>
+nnoremap <silent><leader>fl :Lines<cr>
+nnoremap <silent><leader>fc :BLines<cr>
+nnoremap <silent><leader>ag :Ag <C-R><C-W><cr>
+nnoremap <silent><leader>AG :Ag <C-R><C-A><cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => tagbar settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>t  :TagbarToggle<CR>
+nmap <leader>t<  :tp<CR>
+nmap <leader>t>  :tn<CR>
+nmap <leader>t=  :ts<CR>                     " list all called tags"
+nmap <leader>tl  :call feedkeys("g]")<CR>    " list tags definition under cursor
+nmap <leader>tl  :call feedkeys("<C-T>")<CR> " jump back to tags call position
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => surrounding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" delete surrounding characters
+"noremap ds{ F{xf}x
+"noremap cs{ F{xf}xi
+"noremap ds" F"x,x
+"noremap cs" F"x,xi
+"noremap ds' F'x,x
+"noremap cs' F'x,xi
+"noremap ds( F(xf)x
+"noremap cs( F(xf)xi
+"noremap ds) F(xf)x
+"noremap cs) F(xf)xi
+
 "===============================================================================
 " Git/Fugitive
 "===============================================================================
@@ -141,9 +161,9 @@ nnoremap <leader>o vip:sort<cr>
 vnoremap <leader>o :sort<cr>
 
 " Buffer
-nnoremap <leader>( :bp<cr>
-nnoremap <leader>) :bn<cr>
-nnoremap <leader>= :ls<cr>
+nnoremap <leader>b< :bp<cr>
+nnoremap <leader>b> :bn<cr>
+nnoremap <leader>b= :ls<cr>
 
 " Wrap
 nnoremap <leader>W :set wrap!<cr>
