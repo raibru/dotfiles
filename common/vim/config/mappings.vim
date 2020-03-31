@@ -14,9 +14,7 @@
 " => toggle between clang header and source
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "nmap <c-s> :call SwitchSourceHeader()<CR>
-"nmap ,s :call SwitchSourceHeader()<CR>
-nnoremap <leader>s :call SwitchSourceHeader()<CR>
-"nmap <s :call SwitchSourceHeader()<CR>
+nnoremap <leader>ss :call SwitchSourceHeader()<CR>
 
 nnoremap @@x :%!tidy --indent yes --indent-spaces 4 --indent-attributes yes --wrap-attributes yes -wrap 300 -q -i -xml<CR>
 nnoremap @@r :%s/\r//g<CR>
@@ -51,6 +49,26 @@ ino <up> <Nop>
 
 "============== Custom Mappings ===============
 
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Easier to type, and I never use the default behavior.
+noremap H ^
+noremap L $
+vnoremap L g_
+
+" Easy buffer navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+"turn off search highlighting
+nmap <C-n> :noh<CR>
+
+nnoremap zG 2zg
+
 " custom comma motion mapping
 " delete command dd is not working correct only after hit esc line is deleted
 "nmap di, f,dT,
@@ -58,8 +76,43 @@ ino <up> <Nop>
 "nmap da, f,ld2F,i,<ESC>l "delete argument 
 "nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
 
-"turn off search highlighting
-nmap <C-n> :noh<CR>
+" vim surrounding
+noremap <silent><leader>r' ysiw'
+noremap <silent><leader>r" ysiw"
+" delete surrounding characters
+"noremap ds{ F{xf}x
+"noremap cs{ F{xf}xi
+"noremap ds" F"x,x
+"noremap cs" F"x,xi
+"noremap ds' F'x,x
+"noremap cs' F'x,xi
+"noremap ds( F(xf)x
+"noremap cs( F(xf)xi
+"noremap ds) F(xf)x
+"noremap cs) F(xf)xi
+
+" NERDTree mappings
+nmap <leader>n :NERDTreeToggle<CR>
+
+" ale mappings
+nmap <silent> <leader>a <Plug>(ale_next_wrap)
+
+" tagbar mappings
+nmap <leader>tt  :TagbarToggle<CR>
+nmap <leader>t<  :tp<CR>
+nmap <leader>t>  :tn<CR>
+nmap <leader>t=  :ts<CR>
+nmap <leader>tl  :call feedkey("g]")<CR>
+nmap <leader>tb  :call feedkey("<C-T>")<CR>
+
+" FZF mappings
+nnoremap <silent><leader>ff :Files<cr>
+nnoremap <silent><leader>fb :Buffers<cr>
+nnoremap <silent><leader>fh :History<cr>
+nnoremap <silent><leader>fl :Lines<cr>
+nnoremap <silent><leader>fc :BLines<cr>
+nnoremap <silent><leader>ag :Ag <C-R><C-W><cr>
+nnoremap <silent><leader>AG :Ag <C-R><C-A><cr>
 
 nmap cu ct_
 nmap cU cf_
@@ -99,47 +152,6 @@ nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>n :NERDTreeToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FZF mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent><leader>ff :Files<cr>
-nnoremap <silent><leader>fb :Buffers<cr>
-nnoremap <silent><leader>fh :History<cr>
-nnoremap <silent><leader>fl :Lines<cr>
-nnoremap <silent><leader>fc :BLines<cr>
-nnoremap <silent><leader>ag :Ag <C-R><C-W><cr>
-nnoremap <silent><leader>AG :Ag <C-R><C-A><cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => tagbar settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>t  :TagbarToggle<CR>
-nmap <leader>t<  :tp<CR>
-nmap <leader>t>  :tn<CR>
-nmap <leader>t=  :ts<CR>                     " list all called tags"
-nmap <leader>tl  :call feedkeys("g]")<CR>    " list tags definition under cursor
-nmap <leader>tl  :call feedkeys("<C-T>")<CR> " jump back to tags call position
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => surrounding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" delete surrounding characters
-"noremap ds{ F{xf}x
-"noremap cs{ F{xf}xi
-"noremap ds" F"x,x
-"noremap cs" F"x,xi
-"noremap ds' F'x,x
-"noremap cs' F'x,xi
-"noremap ds( F(xf)x
-"noremap cs( F(xf)xi
-"noremap ds) F(xf)x
-"noremap cs) F(xf)xi
-
 "===============================================================================
 " Git/Fugitive
 "===============================================================================
@@ -161,9 +173,9 @@ nnoremap <leader>o vip:sort<cr>
 vnoremap <leader>o :sort<cr>
 
 " Buffer
-nnoremap <leader>b< :bp<cr>
-nnoremap <leader>b> :bn<cr>
-nnoremap <leader>b= :ls<cr>
+nnoremap <leader>( :bp<cr>
+nnoremap <leader>) :bn<cr>
+nnoremap <leader>= :ls<cr>
 
 " Wrap
 nnoremap <leader>W :set wrap!<cr>
@@ -235,5 +247,11 @@ map <leader>md :InstantMarkdownPreview<CR>
 " Pandoc markdown html
 nmap <leader>mc   :RunSilent pandoc -o ~/.vim/tmp/vim-pandoc-out.html %<CR>
 nmap <leader>mv   :RunSilent /usr/bin/google-chrome-stable ~/.vim/tmp/vim-pandoc-out.html<CR>
+
+" Terminal -> Termdebug (with gdb)
+noremap <M-g> :Termdebug<CR>
+
+" Terminal
+noremap <M-t> :terminal<CR>
 
 " EOF
