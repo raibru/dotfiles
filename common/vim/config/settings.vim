@@ -54,9 +54,12 @@ set ffs=unix,dos
 "set vb
 set ttym=xterm2
 
+set belloff=all
+set noerrorbells
+
 "set wrap
 
-set tags=./tags
+set tags=./tags,.git/tags
 
 set diffopt+=vertical
 set diffopt+=iwhite
@@ -120,21 +123,6 @@ augroup END
 
 " set statusline+=%=
 
-" Keep search matches in the middle of the window.
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
-" Easier to type, and I never use the default behavior.
-noremap H ^
-noremap L $
-vnoremap L g_
-
-" Easy buffer navigation
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-
 " Make zO recursively open whatever fold we're in, even if it's partially open.
 "nnoremap zO zczO
 " Spelling
@@ -155,27 +143,10 @@ noremap <C-l> <C-w>l
 " List dics by comma eg: ./utf-8.add, ./local-dict.add, ...
 set dictionary=/usr/share/dict/words
 set spellfile=~/.vim/spell/rbr.utf-8.add,~/.vim-local-dictionary.utf-8.add
-nnoremap zG 2zg
 
-"
-" GO extensions for vim. havte to find out how this works with _gopls_
-"let g:go_def_mode='gopls'
-"let g:go_info_mode='gopls'
-"
-" Suggestion: show info for completion candidates in a popup menu
-"set updatetime=500
-"set balloondelay=250
-"set signcolumn=yes
-"" will suffice, no autocmd required.
-"autocmd! BufEnter,BufNewFile *.go syntax on
-"autocmd! BufLeave *.go syntax off
-"set autoindent
-"set smartindent
-"filetype indent on
-"set backspace=2
-"if has("patch-8.1.1904")
-"  set completeopt+=popup
-"  set completepopup=align:menu,border:off,highlight:Pmenu
-"endif
+" Vim 8 has his own debugging layout
+if v:version > 801
+  packadd termdebug
+endif
 
 " EOF
