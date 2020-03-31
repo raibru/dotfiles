@@ -44,29 +44,20 @@ Plugin 'junegunn/fzf.vim'                 " It's an interactive Unix filter for 
 Plugin 'mileszs/ack.vim'                  " Run your favorite search tool from Vim, with an enhanced results list
 Plugin 'tpope/vim-surround'               " Surround.vim is all about 'surroundings': parentheses, brackets,
                                           "   quotes, XML tags, and more
-Plugin 'tpope/vim-commentary'             " Comment stuff out gcc to comment out a line (takes a count)
 Plugin 'xolox/vim-misc'                   " Automated tag generation and syntax highlighting in Vim
 Plugin 'xolox/vim-easytags'               " need xolos/vim-misc
 Plugin 'majutsushi/tagbar'                " tagbar shows functions, variables and other identifiers in a split pane
 Plugin 'easymotion'                       " EasyMotion provides a much simpler way to use some motions in vim
 Plugin 'Raimondi/delimitMate'             " This plug-in provides automatic closing of quotes, parenthesis, brackets,
                                           "   etc., besides some other related features
+"Plugin 'nathanaelkane/vim-indent-guides' " Indent Guides is a plugin for visually displaying indent levels in Vim
 Plugin 'mbbill/undotree'                  " The undo history visualizer for VIM and makes it easier to browse and
                                           "   switch between different undo branches.
 Plugin 'godlygeek/tabular'                " Vim script for text filtering and alignment. abularize lets you align
                                           "   statements on their equal signs and other characters
-Plugin 'Shougo/neocomplete.vim'           " Neocomplete is an autocomplete plugin with additional support for snippets
-
-"Plugin 'nathanaelkane/vim-indent-guides' " Indent Guides is a plugin for visually displaying indent levels in Vim
 
 " Lint Support
 Plugin 'w0rp/ale'                         " ALE (Asynchronous Lint Engine) is a plugin for providing linting
-
-"Plugin 'vim-syntastic/syntastic'          " Syntastic is a syntax checking plugin and runs files through external
-"                                          "   syntax checkers and displays any resulting errors to the user
-"Plugin 'neomake/neomake'                  " Neomake is a plugin for Vim/Neovim to asynchronously run programs.
-"                                          "   You can use it instead of the built-in :make
-"Plugin 'terryma/vim-multiple-cursors'     " VSCode/Sublime Text's awesome multiple selection feature into Vim
 
 " Docomentation Support
 Plugin 'vimwiki/vimwiki'                  " Vimwiki is a personal wiki for Vim -- a number of linked text files
@@ -74,33 +65,24 @@ Plugin 'vimwiki/vimwiki'                  " Vimwiki is a personal wiki for Vim -
 " Markdown Support
 Plugin 'tpope/vim-markdown'               " Markdown / Writting
 Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'LanguageTool'
-Plugin 'suan/vim-instant-markdown'        " Instant Markdown preview from vim
-"Plugin 'reedes/vim-pencil'
+Plugin 'fatih/vim-go'                     " Language support for go lang
 
 " Git Support
 Plugin 'tpope/vim-fugitive'               " Git wrapper for Vim. It complements the command line interface to git,
                                           "   but does not aim to replace it
 Plugin 'kablamo/vim-git-log'              " Git log support
+Plugin 'gregsexton/gitv'                  " The goal is to give you a similar set of functionality as a repository viewer support
 Plugin 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the 'gutter' (sign column). It shows whether
                                           " each line has been added, modified, and where lines have been removed
-"Plugin 'gregsexton/gitv'                  " Has not any mantainence now. The goal is to give you a similar set of functionality as a repository viewer support
+" ???!!!
+"Plugin 'LanguageTool'
+"Plugin 'suan/vim-instant-markdown'        " Instant Markdown preview from vim
 "Plugin 'jaxbot/github-issues.vim'
 
 " Colors
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'AnsiEsc.vim'
-
-" Language support
-Plugin 'fatih/vim-go'                     " Language support for go lang
-"Plugin 'govim/govim'                     " Go development plugin for Vim8, much like vim-go. But unlike vim-go, govim is written
-                                          " in Go, not VimScript
-
-" Command-T is a Vim plug-in that provides an extremely fast "fuzzy" mechanism
-" for Opening files and buffers Jumping to tags and help Running commands,
-" orprevious searches and commands with a minimal number of keystrokes.
-"Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -132,42 +114,12 @@ let NERDTreeIgnore=['\~$', '\.swp$', '\.git', '\.svn', '\.cache']
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-multiple-cursors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:multi_cursor_use_default_mapping=0
-"
-"" Default mapping
-"let g:multi_cursor_start_word_key      = '<C-s>'
-"let g:multi_cursor_select_all_word_key = '<A-s>'
-"let g:multi_cursor_start_key           = 'g<C-s>'
-"let g:multi_cursor_select_all_key      = 'g<A-s>'
-"let g:multi_cursor_next_key            = '<C-s>'
-"let g:multi_cursor_prev_key            = '<C-p>'
-"let g:multi_cursor_skip_key            = '<C-x>'
-"let g:multi_cursor_quit_key            = '<Esc>'
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
 " Annotate strings with gettext 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic (syntax checker)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"" let g:syntastic_check_on_wq = 0
-"" let g:syntastic_enable_elixir_checker = 1
-"" let g:syntastic_elixir_checkers = ["elixir"]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ale settings
@@ -177,9 +129,6 @@ let g:ale_linters = {
 \   'cpp': ['cppcheck'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
-"\   'go': ['gopls']
-
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
 " Disabling highlighting
 let g:ale_set_highlights = 0
@@ -198,12 +147,6 @@ let g:ale_lint_on_enter = 0
 " This can easily be changed back to pre-1.3 behavior by rebinding
 " the leader in your vimrc:
 "let g:EasyMotion_leader_key = '<Leader>'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neomake settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"autocmd! BufWritePost * Neomake
-"let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-easytag 
@@ -258,13 +201,6 @@ let g:vimwiki_ext2syntax = {'.mdw': 'markdown', '.mdwiki': 'markdown' }
 let g:vimwiki_map_prefix = '<leader>e'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-instant-markdown settings
-" Instant Markdown previews from Vim
-" https://github.com/suan/vim-instant-markdown
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:instant_markdown_autostart = 0    " disable autostart
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tabularize
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "<Leader>a= :Tabularize /=<CR>
@@ -272,14 +208,6 @@ let g:instant_markdown_autostart = 0    " disable autostart
 "<Leader>a:: :Tabularize /:\zs<CR>
 "<Leader>a, :Tabularize /,<CR>
 "<Leader>a<Bar> :Tabularize /<Bar><CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neocomplete
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:acp_enableAtStartup = 0                             " Disable AutoComplPop
-let g:neocomplete#enable_at_startup = 0                   " Use neocomplete
-let g:neocomplete#enable_smart_case = 1                   " Use smartcase
-let g:neocomplete#sources#syntax#min_keyword_length = 3   " Set minimum syntax keyword length
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ack settings
@@ -325,5 +253,12 @@ let g:fzf_layout = { 'down': '~40%' }
 "
 " [[B]Commits] Customize the options used by 'git log':
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-instant-markdown settings
+" Instant Markdown previews from Vim
+" https://github.com/suan/vim-instant-markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:instant_markdown_autostart = 0    " disable autostart
 
 " EOF
