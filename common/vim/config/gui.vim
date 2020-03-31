@@ -87,5 +87,11 @@ else
   let &t_EI.="\<Esc>[1 q"
   let &t_te.="\<Esc>[0 q"
 endif
-                                   
+
+" Set bell behavior off
+set visualbell t_vb=
+if has("autocmd") && has("gui")
+    au GUIEnter * set t_vb=
+endif                                  
+
 " EOF
