@@ -32,4 +32,8 @@ source ~/.vim/syntax/md.vim
 source ~/.vim/syntax/yaml.vim
 source ~/.vim/syntax/mot.vim
 
+if filereadable(expand("~/.vim/local.vim"))
+  source ~/.vim/local.vim
+endif
+
 " EOF
