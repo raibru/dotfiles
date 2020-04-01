@@ -56,6 +56,11 @@ Plugin 'mbbill/undotree'                  " The undo history visualizer for VIM 
 Plugin 'godlygeek/tabular'                " Vim script for text filtering and alignment. abularize lets you align
                                           "   statements on their equal signs and other characters
 
+Plugin 'fatih/vim-go'                     " Language support for go lang
+Plugin 'Shougo/deoplete.nvim'             " Real-time completion (Neovim and Vim 8)
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+
 " Lint Support
 Plugin 'w0rp/ale'                         " ALE (Asynchronous Lint Engine) is a plugin for providing linting
 
@@ -65,7 +70,6 @@ Plugin 'vimwiki/vimwiki'                  " Vimwiki is a personal wiki for Vim -
 " Markdown Support
 Plugin 'tpope/vim-markdown'               " Markdown / Writting
 Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'fatih/vim-go'                     " Language support for go lang
 
 " Git Support
 Plugin 'tpope/vim-fugitive'               " Git wrapper for Vim. It complements the command line interface to git,
@@ -104,6 +108,39 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " *** Bumdle Configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline Powerline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+    endif
+
+    " unicode symbols
+    " let g:airline_left_sep = '»'
+    " let g:airline_left_sep = '▶'
+    " let g:airline_right_sep = '«'
+    " let g:airline_right_sep = '◀'
+    " let g:airline_symbols.linenr = '␊'
+    " let g:airline_symbols.linenr = '␤'
+    " let g:airline_symbols.linenr = '¶'
+    " let g:airline_symbols.branch = '⎇'
+    " let g:airline_symbols.paste = 'ρ'
+    " let g:airline_symbols.paste = 'Þ'
+    " let g:airline_symbols.paste = '∥'
+    " let g:airline_symbols.whitespace = 'Ξ'
+    "
+    " " airline symbols
+    " let g:airline_left_sep = ''
+    " let g:airline_left_alt_sep = ''
+    " let g:airline_right_sep = ''
+    " let g:airline_right_alt_sep = ''
+    " let g:airline_symbols.branch = ''
+    " let g:airline_symbols.readonly = ''
+    " let g:airline_symbols.linenr = ''
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -164,7 +201,36 @@ let g:easytags_events = ['BufWritePost']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-go
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Automatically get signature/type info for object under cursor
+let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
+let g:go_autodetect_gopath = 0
+let g:go_bin_path = expand($GOPATH."/bin")
+let g:go_root_path = expand($GOROOT)
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => autocomplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set completeopt +=noinsert
+"set completeopt =menu,preview
+set completeopt +=noselect
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#disable_auto_complete = 1
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = expand($GOPATH.'/bin/gocode')
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+"let g:deoplete#sources#go#source_importer = 1
+let g:deoplete#sources#go#use_cache = 1
+let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/'
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#manual_complete()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GIT
