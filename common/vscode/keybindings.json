@@ -1,15 +1,5 @@
 // Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
 [
-    //
-    // -----
-    //
-  // - goTestExplorer.focus
-  // - goTestExplorer.goToLocation
-  // - goTestExplorer.refreshTestExplorer
-  // - goTestExplorer.runAllTest
-  // - goTestExplorer.runTest
-  // - goTestExplorer.runTestSuite
-  // - goTestExplorer.showTestoutput
       {
         "key": "shift+alt+up",
         "command": "editor.action.copyLinesUpAction",
@@ -58,35 +48,39 @@
         "when": "terminalFocus"
       },
       {
-        "key": "ctrl+b ctrl+m",
+        "key": "ctrl+b b",
+        "command": "workbench.action.toggleSidebarVisibility"
+      },
+      {
+        "key": "ctrl+b m",
         "command": "workbench.view.scm"
       },
       {
-        "key": "ctrl+b ctrl+e",
+        "key": "ctrl+b e",
         "command": "workbench.view.explorer"
       },
       {
-        "key": "ctrl+b ctrl+f",
+        "key": "ctrl+b f",
         "command": "workbench.view.search"
       },
       {
-        "key": "ctrl+b ctrl+d",
+        "key": "ctrl+b d",
         "command": "workbench.view.debug"
       },
       {
-        "key": "ctrl+b ctrl+x",
+        "key": "ctrl+b x",
         "command": "workbench.extensions.action.showInstalledExtensions"
       },
       {
-        "key": "ctrl+b ctrl+p",
+        "key": "ctrl+b p",
         "command": "workbench.view.extension.project-manager"
       },
       {
-        "key": "ctrl+b ctrl+g",
+        "key": "ctrl+b g",
         "command": "workbench.view.extension.gitlens"
       },
       {
-        "key": "ctrl+e ctrl+e",
+        "key": "ctrl+e e",
         "command": "workbench.action.focusActiveEditorGroup"
       },
       {
@@ -94,15 +88,7 @@
         "command": "workbench.action.focusLeftGroup"
       },
       {
-        "key": "ctrl+w left",
-        "command": "workbench.action.focusLeftGroup"
-      },
-      {
         "key": "ctrl+j",
-        "command": "workbench.action.focusAboveGroup"
-      },
-      {
-        "key": "ctrl+w up",
         "command": "workbench.action.focusAboveGroup"
       },
       {
@@ -110,15 +96,7 @@
         "command": "workbench.action.focusBelowGroup"
       },
       {
-        "key": "ctrl+w down",
-        "command": "workbench.action.focusBelowGroup"
-      },
-      {
         "key": "ctrl+l",
-        "command": "workbench.action.focusRightGroup"
-      },
-      {
-        "key": "ctrl+w right",
         "command": "workbench.action.focusRightGroup"
       },
       {
@@ -127,15 +105,31 @@
       },
       {
         "key": "ctrl+shift+j",
-        "command": "workbench.action.moveActiveEditorGroupDown"
-      },
-      {
-        "key": "ctrl+shift+j",
         "command": "workbench.action.moveActiveEditorGroupUp"
       },
       {
-        "key": "ctrl+shift+j",
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.moveActiveEditorGroupDown"
+      },
+      {
+        "key": "ctrl+shift+l",
         "command": "workbench.action.moveActiveEditorGroupRight"
+      },
+      {
+        "key": "ctrl+w left",
+        "command": "workbench.action.focusLeftGroup"
+      },
+      {
+        "key": "ctrl+w up",
+        "command": "workbench.action.focusAboveGroup"
+      },
+      {
+        "key": "ctrl+w down",
+        "command": "workbench.action.focusBelowGroup"
+      },
+      {
+        "key": "ctrl+w right",
+        "command": "workbench.action.focusRightGroup"
       },
       {
         "key": "ctrl+w s",
@@ -144,77 +138,5 @@
       {
         "key": "ctrl+w v",
         "command": "workbench.action.splitEditorRight"
-      },
-  
-  //
-    // have to check
-    //
-    // {
-    //   "key": "ctrl+- s",
-    //   "command": "workbench.action.splitEditor",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- z X",
-    //   "command": "editor.foldAll",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- z O",
-    //   "command": "editor.unfoldAll",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- z x",
-    //   "command": "editor.fold",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- z o",
-    //   "command": "editor.unfold",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- c",
-    //   "command": "workbench.action.tasks.runTask",
-    //   "args": "Compile"
-    // },
-    // {
-    //   "key": "ctrl+- b",
-    //   "command": "workbench.action.tasks.runTask",
-    //   "args": "build",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- t",
-    //   "command": "workbench.action.tasks.runTask",
-    //   "args": "test",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- d",
-    //   "command": "workbench.action.tasks.runTask",
-    //   "args": "docs",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- r",
-    //   "command": "workbench.action.tasks.runTask",
-    //   "args": "run",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- x",
-    //   "command": "workbench.action.tasks.runTask",
-    //   "args": "Clean-Test",
-    //   "when": "editorTextFocus"
-    // },
-    // {
-    //   "key": "ctrl+- e",
-    //   "command": "workbench.action.terminal.runSelectedText"
-    // },
-    // {
-    //   "key": "ctrl+- -",
-    //   "command": "workbench.action.toggleMaximizedPanel"
-    // },
+      }
   ]
