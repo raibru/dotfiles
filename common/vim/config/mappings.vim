@@ -104,10 +104,13 @@ nmap <leader>t>  :tn<CR>
 nmap <leader>t=  :ts<CR>
 nmap <leader>tl  :call feedkey("g]")<CR>
 nmap <leader>tb  :call feedkey("<C-T>")<CR>
+nmap <leader>tp  :tp<CR>
+nmap <leader>tn  :tn<CR>
 
 " FZF mappings
 nnoremap <silent><leader>ff :Files<cr>
 nnoremap <silent><leader>fb :Buffers<cr>
+nnoremap <silent><leader>bl :Buffers<cr>
 nnoremap <silent><leader>fh :History<cr>
 nnoremap <silent><leader>fl :Lines<cr>
 nnoremap <silent><leader>fc :BLines<cr>
@@ -173,9 +176,11 @@ nnoremap <leader>o vip:sort<cr>
 vnoremap <leader>o :sort<cr>
 
 " Buffer
-nnoremap <leader>( :bp<cr>
-nnoremap <leader>) :bn<cr>
+nnoremap <leader>< :bp<cr>
+nnoremap <leader>> :bn<cr>
 nnoremap <leader>= :ls<cr>
+nnoremap <silent><leader>bp :bp<cr>
+nnoremap <silent><leader>bn :bn<cr>
 
 " Wrap
 nnoremap <leader>W :set wrap!<cr>
@@ -252,6 +257,7 @@ nmap <leader>mv   :RunSilent /usr/bin/google-chrome-stable ~/.vim/tmp/vim-pandoc
 noremap <M-g> :Termdebug<CR>
 
 " Terminal
-noremap <M-t> :terminal<CR>
+noremap <silent><M-t> :terminal<CR>
+tnoremap <ESC> <C-\><C-n>  " Set inactive. to activate again press 'i'
 
 " EOF
