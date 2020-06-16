@@ -76,47 +76,6 @@ nnoremap zG 2zg
 "nmap da, f,ld2F,i,<ESC>l "delete argument 
 "nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
 
-" vim surrounding
-noremap <silent><leader>r' ysiw'
-noremap <silent><leader>r" ysiw"
-" delete surrounding characters
-"noremap ds{ F{xf}x
-"noremap cs{ F{xf}xi
-"noremap ds" F"x,x
-"noremap cs" F"x,xi
-"noremap ds' F'x,x
-"noremap cs' F'x,xi
-"noremap ds( F(xf)x
-"noremap cs( F(xf)xi
-"noremap ds) F(xf)x
-"noremap cs) F(xf)xi
-
-" NERDTree mappings
-nmap <leader>n :NERDTreeToggle<CR>
-
-" ale mappings
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
-
-" tagbar mappings
-nmap <leader>tt  :TagbarToggle<CR>
-nmap <leader>t<  :tp<CR>
-nmap <leader>t>  :tn<CR>
-nmap <leader>t=  :ts<CR>
-nmap <leader>tl  :call feedkey("g]")<CR>
-nmap <leader>tb  :call feedkey("<C-T>")<CR>
-nmap <leader>tp  :tp<CR>
-nmap <leader>tn  :tn<CR>
-
-" FZF mappings
-nnoremap <silent><leader>ff :Files<cr>
-nnoremap <silent><leader>fb :Buffers<cr>
-nnoremap <silent><leader>bl :Buffers<cr>
-nnoremap <silent><leader>fh :History<cr>
-nnoremap <silent><leader>fl :Lines<cr>
-nnoremap <silent><leader>fc :BLines<cr>
-nnoremap <silent><leader>ag :Ag <C-R><C-W><cr>
-nnoremap <silent><leader>AG :Ag <C-R><C-A><cr>
-
 nmap cu ct_
 nmap cU cf_
 
@@ -154,20 +113,6 @@ nmap <Leader>r" "_di"P
 nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
-
-"===============================================================================
-" Git/Fugitive
-"===============================================================================
-nnoremap <Leader>gb :Gblame<cr>
-nnoremap <Leader>gd :Gdiff<cr>
-nnoremap <Leader>gs :Gstatus<cr>
-
-"nmap ]h <Plug>GitGutterNextHunk
-"nmap [h <Plug>GitGutterPrevHunk
-nmap <leader>g] <Plug>GitGutterNextHunk
-nmap <leader>g[ <Plug>GitGutterPrevHunk
-nmap <leader>gg :GitGutterToggle<CR>
-nmap <leader>gv :Gitv<CR>
 
 nmap <leader>u :UndotreeToggle<CR>
 
@@ -259,5 +204,60 @@ noremap <M-g> :Termdebug<CR>
 " Terminal
 noremap <silent><M-t> :terminal<CR>
 tnoremap <ESC> <C-\><C-n>  " Set inactive. to activate again press 'i'
+
+"" vim surrounding
+"noremap <silent><leader>r' ysiw'
+""noremap <silent><leader>r" ysiw"
+"" delete surrounding characters
+""noremap ds{ F{xf}x
+""noremap cs{ F{xf}xi
+""noremap ds" F"x,x
+""noremap cs" F"x,xi
+""noremap ds' F'x,x
+""noremap cs' F'x,xi
+""noremap ds( F(xf)x
+""noremap cs( F(xf)xi
+""noremap ds) F(xf)x
+""noremap cs) F(xf)xi
+"
+""" NERDTree mappings
+"nmap <leader>n :NERDTreeToggle<CR>
+""
+"" ale mappings
+"nmap <silent> <leader>a <Plug>(ale_next_wrap)
+""
+"" tagbar mappings
+"nmap <leader>tt  :TagbarToggle<CR>
+""nmap <leader>t<  :tp<CR>
+"nmap <leader>t>  :tn<CR>
+""nmap <leader>t=  :ts<CR>
+"nmap <leader>tl  :call feedkey("g]")<CR>
+""nmap <leader>tb  :call feedkey("<C-T>")<CR>
+"nmap <leader>tp  :tp<CR>
+""nmap <leader>tn  :tn<CR>
+"
+""" FZF mappings
+"nnoremap <silent><leader>ff :Files<cr>
+""nnoremap <silent><leader>fb :Buffers<cr>
+"nnoremap <silent><leader>bl :Buffers<cr>
+""nnoremap <silent><leader>fh :History<cr>
+"nnoremap <silent><leader>fl :Lines<cr>
+""nnoremap <silent><leader>fc :BLines<cr>
+"nnoremap <silent><leader>ag :Ag <C-R><C-W><cr>
+""nnoremap <silent><leader>AG :Ag <C-R><C-A><cr>
+
+""===============================================================================
+"" Git/Fugitive
+""===============================================================================
+"nnoremap <Leader>gb :Gblame<cr>
+""nnoremap <Leader>gd :Gdiff<cr>
+"nnoremap <Leader>gs :Gstatus<cr>
+""
+""nmap ]h <Plug>GitGutterNextHunk
+""nmap [h <Plug>GitGutterPrevHunk
+"nmap <leader>g] <Plug>GitGutterNextHunk
+""nmap <leader>g[ <Plug>GitGutterPrevHunk
+"nmap <leader>gg :GitGutterToggle<CR>
+""nmap <leader>gv :Gitv<CR>
 
 " EOF
