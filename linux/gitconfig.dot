@@ -9,6 +9,7 @@
   pcb = rev-parse --abbrev-ref HEAD
   hist = log --oneline --graph -n30
   histfull = !git log --graph --pretty=format:\"%C(yellow)%h | %C(green)%aI | %an | %C(white)%s\"
+  histtxt = !git log --pretty=format:\"%C(yellow)%h | %C(green)%aI | %an | %C(white)%s\"
 
   cm = bulk checkout master
   gitmerge = git mergetool -t vimdiff
