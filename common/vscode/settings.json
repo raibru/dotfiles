@@ -63,7 +63,8 @@
         "editorPane.background": "#ff0000",
         "statusBar.background": "#005F5F",
         "statusBar.noFolderBackground": "#005F5F",
-        "statusBar.debuggingBackground": "#005F5F"
+        "statusBar.debuggingBackground": "#005F5F",
+        "statusBar.foreground": "#FFFFFF"
     },
 
     //"terminal.external.windowsExec": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -82,6 +83,7 @@
     },
     
     "markdown-pdf.executablePath": "C:\\Users\\r.brudna\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+    "markdown-preview-enhanced.usePandocParser": true,
     "[markdown]": {
         "editor.wordWrapColumn": 120,
         "editor.wordWrap": "wordWrapColumn",
@@ -111,8 +113,15 @@
     "fileutils.typeahead.exclude": {
     },
     
-    "go.autocompleteUnimportedPackages": true,
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "package",
     "go.useLanguageServer": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.gopath": "/home/rbr/Projects/share/go",
+    "[go]": {
+        "editor.formatOnSave": true
+    },
+    
     
     "vim.leader": ",",
     "vim.sneak": true,
@@ -123,13 +132,31 @@
     "vim.easymotion": true,
     "vim.surround": true,
     "vim.useCtrlKeys": true,
+
+    //"vim.statusBarColors.normal": "#005F5F",
+    //"vim.statusBarColorControl": true,
+    //"vim.statusBarColors.insert": "#005F87",
+    //"vim.statusBarColors.replace": "#5C5ADA",
+    //"vim.statusBarColors.visual": "#F50B0B",
+    //"vim.statusBarColors.visualline": "#F50B0B",
+    //"vim.statusBarColors.visualblock": "#F50B0B",
+    
     "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": "#005F5F",
-    "vim.statusBarColors.insert": "#005F87",
-    "vim.statusBarColors.replace": "#5C5ADA",
-    "vim.statusBarColors.visual": "#F50B0B",
-    "vim.statusBarColors.visualline": "#F50B0B",
-    "vim.statusBarColors.visualblock": "#F50B0B",
+    "vim.statusBarColors.normal": [
+        "#005F5F",
+        "#FFFFFF"
+    ],
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#B48EAD",
+    "vim.statusBarColors.visualline": "#B48EAD",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+    "vim.statusBarColors.commandlineinprogress": "#007ACC",
+    "vim.statusBarColors.searchinprogressmode": "#007ACC",
+    "vim.statusBarColors.easymotionmode": "#007ACC",
+    "vim.statusBarColors.easymotioninputmode": "#007ACC",
+    "vim.statusBarColors.surroundinputmode": "#007ACC",
+
     "vim.handleKeys": {
             "<C-a>": false,
             "<C-f>": false
@@ -210,7 +237,7 @@
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
-    ]
+    ],
 }
 
 
