@@ -138,5 +138,28 @@
       {
         "key": "ctrl+w v",
         "command": "workbench.action.splitEditorRight"
-      }
+      },
+      {
+        "key": "ctrl+w c",
+        "command": "workbench.action.closeActiveEditor"
+      },
+      {
+        "key": "alt+x r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "run"
+      },
+      {
+        "key": "alt+x t",
+        "command": "workbench.action.tasks.runTask",
+        "args": "run-test"
+      },
+      {
+        "key": "alt+x b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build"
+      },
+      {
+        "key": "alt+v",
+        "command": "toggleVim"
+      },
   ]
