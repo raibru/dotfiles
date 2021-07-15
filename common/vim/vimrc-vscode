@@ -1,0 +1,34 @@
+
+"============== Custom scripts ===============
+"source ~/.vim/after/syntaxcheck.vim
+
+"============== Filetype stuff ===============
+filetype plugin on
+filetype indent on
+source ~/.vim/config/filetype.vim
+
+"============== Script configs ===============
+
+" Load custom settings
+source ~/.vim/config/settings-vscode.vim
+source ~/.vim/config/bundles-vscode.vim
+source ~/.vim/config/functions.vim
+source ~/.vim/config/commands.vim
+source ~/.vim/config/mappings.vim
+source ~/.vim/config/abbrs.vim
+
+" Syntax-specific settings
+source ~/.vim/syntax/confluencewiki.vim
+source ~/.vim/syntax/git.vim
+source ~/.vim/syntax/gitcommit.vim
+source ~/.vim/syntax/gitrebase.vim
+source ~/.vim/syntax/nginx.vim
+source ~/.vim/syntax/md.vim
+source ~/.vim/syntax/yaml.vim
+source ~/.vim/syntax/mot.vim
+
+if filereadable(expand("~/.vim/local.vim"))
+  source ~/.vim/local.vim
+endif
+
+" EOF
