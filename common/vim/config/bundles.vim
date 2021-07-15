@@ -57,9 +57,10 @@ Plugin 'godlygeek/tabular'                " Vim script for text filtering and al
                                           "   statements on their equal signs and other characters
 
 Plugin 'fatih/vim-go'                     " Language support for go lang
-Plugin 'Shougo/deoplete.nvim'             " Real-time completion (Neovim and Vim 8)
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
+
+"Plugin 'Shougo/deoplete.nvim'             " Real-time completion (Neovim and Vim 8)
+"Plugin 'roxma/nvim-yarp'
+"Plugin 'roxma/vim-hug-neovim-rpc'
 
 " Lint Support
 Plugin 'w0rp/ale'                         " ALE (Asynchronous Lint Engine) is a plugin for providing linting
@@ -111,11 +112,11 @@ filetype plugin indent on    " required
 source ~/.vim/config/bundles/ack.vim
 source ~/.vim/config/bundles/ale.vim
 source ~/.vim/config/bundles/delimitmate.vim
-source ~/.vim/config/bundles/deoplate.vim
+"source ~/.vim/config/bundles/deoplate.vim
+"source ~/.vim/config/bundles/nvim-yarp.vim
 source ~/.vim/config/bundles/easymotion.vim
 source ~/.vim/config/bundles/fzf.vim
 source ~/.vim/config/bundles/nerdtree.vim
-source ~/.vim/config/bundles/nvim-yarp.vim
 source ~/.vim/config/bundles/tabular.vim
 source ~/.vim/config/bundles/tagbar.vim
 source ~/.vim/config/bundles/undotree.vim
