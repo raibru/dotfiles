@@ -52,7 +52,7 @@ set laststatus=2
 set ffs=unix,dos
 "set mouse=a
 "set vb
-set ttym=xterm2
+"set ttym=xterm2
 
 set belloff=all
 set noerrorbells
