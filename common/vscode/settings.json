@@ -134,6 +134,9 @@
   // Editor stuff using neovim
   "vscode-neovim.neovimExecutablePaths.win32": "C:/Projects/Programs/neovim/nvim/bin/nvim.exe",
   "vscode-neovim.neovimInitVimPaths.win32": "~/.vim/nvim_init.vim",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.vim/nvim_init.vim",
+  "vscode-neovim.useWSL": true,
   "vscode-neovim.mouseSelectionStartVisualMode": true,
   //
   "whichkey.sortOrder": "alphabetically",
