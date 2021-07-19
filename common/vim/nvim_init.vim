@@ -2,9 +2,9 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 if exists('g:vscode')
-    source vimrc-vscode
+    source ~/.vim/vimrc-vscode
 else
-    source vimrc
+    source ~/.vim/vimrc
 endif
     
 "source ~/.vimrc
