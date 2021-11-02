@@ -24,7 +24,6 @@
     80,
     120
   ],
-  "editor.renderIndentGuides": true,
   "editor.showFoldingControls": "always",
   "editor.lineNumbers": "relative",
   // When I accidentally hit copy without selecting anything and it overrides my clipboard - ugh.
@@ -78,7 +77,8 @@
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.cursorBlinking": false,
   "terminal.integrated.cursorStyle": "block",
-  "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
+  "terminal.integrated.defaultProfile.windows": "C:\\windows\\System32\\cmd.exe",
+  "terminal.integrated.defaultProfile.linux": "bash",
   //
   "merge-conflict.diffViewPosition": "Below",
   //
@@ -97,14 +97,12 @@
     "editor.insertSpaces": true
   },
   //
-  "gitlens.advanced.telemetry.enabled": false,
   "gitlens.defaultDateFormat": "YYYY-MM-DD hh:mm",
   "gitlens.defaultDateShortFormat": "YY-MM-DD",
   "gitlens.defaultTimeFormat": "hh:mm",
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.enabled": false,
   "gitlens.keymap": "none",
-  "gitlens.views.fileHistory.enabled": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -114,9 +112,7 @@
     "suppressNoRepositoryWarning": false,
   },
   //
-  "fileutils.delete.useTrash": true,
-  "fileutils.delete.confirm": true,
-  "fileutils.typeahead.exclude": {},
+  "fileutils.typeahead.enabled": false,
   //
   "go.lintOnSave": "package",
   "go.vetOnSave": "package",
