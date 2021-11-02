@@ -73,11 +73,11 @@ Plugin 'tpope/vim-markdown'               " Markdown / Writting
 Plugin 'jtratner/vim-flavored-markdown'
 
 " Git Support
-Plugin 'tpope/vim-fugitive'               " Git wrapper for Vim. It complements the command line interface to git,
-                                          "   but does not aim to replace it
-Plugin 'kablamo/vim-git-log'              " Git log support
-Plugin 'gregsexton/gitv'                  " The goal is to give you a similar set of functionality as a repository viewer support
-Plugin 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the 'gutter' (sign column). It shows whether
+"Plugin 'tpope/vim-fugitive'               " Git wrapper for Vim. It complements the command line interface to git,
+"                                          "   but does not aim to replace it
+"Plugin 'kablamo/vim-git-log'              " Git log support
+"Plugin 'gregsexton/gitv'                  " The goal is to give you a similar set of functionality as a repository viewer support
+"Plugin 'airblade/vim-gitgutter'           " A Vim plugin which shows a git diff in the 'gutter' (sign column). It shows whether
                                           " each line has been added, modified, and where lines have been removed
 " ???!!!
 "Plugin 'LanguageTool'
@@ -123,9 +123,9 @@ source ~/.vim/config/bundles/undotree.vim
 source ~/.vim/config/bundles/vim-airline.vim
 source ~/.vim/config/bundles/vim-easytags.vim
 source ~/.vim/config/bundles/vim-flavored-markdown.vim
-source ~/.vim/config/bundles/vim-fugitive.vim
-source ~/.vim/config/bundles/vim-gitgutter.vim
-source ~/.vim/config/bundles/vim-git-log.vim
+"source ~/.vim/config/bundles/vim-fugitive.vim
+"source ~/.vim/config/bundles/vim-gitgutter.vim
+"source ~/.vim/config/bundles/vim-git-log.vim
 source ~/.vim/config/bundles/vim-go.vim
 source ~/.vim/config/bundles/vim-markdown.vim
 source ~/.vim/config/bundles/vim-misc.vim
