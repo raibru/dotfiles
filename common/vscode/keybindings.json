@@ -84,22 +84,6 @@
         "command": "workbench.action.focusActiveEditorGroup"
       },
       {
-        "key": "ctrl+h",
-        "command": "workbench.action.focusLeftGroup"
-      },
-      {
-        "key": "ctrl+j",
-        "command": "workbench.action.focusAboveGroup"
-      },
-      {
-        "key": "ctrl+k",
-        "command": "workbench.action.focusBelowGroup"
-      },
-      {
-        "key": "ctrl+l",
-        "command": "workbench.action.focusRightGroup"
-      },
-      {
         "key": "ctrl+shift+h",
         "command": "workbench.action.moveActiveEditorGroupLeft"
       },

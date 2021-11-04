@@ -23,8 +23,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -112,6 +112,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lh='ls -laFh'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -141,7 +142,7 @@ fi
 
 ###   ###
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:~/.local/bin
 
 export GOPATH=~/Projects/share/go
 export GOROOT=/opt/go
@@ -158,4 +159,12 @@ export PYTHONPATH=$PYTHONPATH:~/.python
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US
 
+# some dotnet stuff
+export DOTNET_PATH=/opt/dotnet
+export DOTNET_ROOT=/opt/dotnet
+export PATH=$PATH:/opt/dotnet
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 # EOF
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
