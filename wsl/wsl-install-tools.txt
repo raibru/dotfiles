@@ -1,0 +1,18 @@
+Commandline: apt-get -y -qq install ubuntu-wsl
+Commandline: apt-get install -y neofetch htop git neomutt tidy openjdk-11-jdk tmux tig taskwarrior w3m exuberant-ctags cppcheck tasksh pandoc iotop
+Commandline: apt-get install iftop
+Commandline: apt install zip unzip
+Commandline: apt-get install ncdu tree
+Commandline: apt-get install youtube-dl
+Commandline: apt install asciidoc
+Commandline: apt install asciidoctor
+Commandline: apt install graphviz plantuml
+Commandline: apt install python3-pip
+Commandline: apt install texlive-xetex texlive-fonts-extra texlive-xetex texlive-lang-english texlive-lang-german
+Commandline: apt install librsvg2-bin
+Commandline: apt install pandoc
+Commandline: apt install imagemagick
+Commandline: apt install podman
+Commandline: apt-get install pdf-presenter-console
+Commandline: apt install buildah
+Commandline: apt install poppler-utils
