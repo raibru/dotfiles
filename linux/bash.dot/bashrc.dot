@@ -159,6 +159,7 @@ fi
 ###   ###
 
 export PATH=$PATH:~/bin:~/.local/bin
+export SSLKEYLOGFILE=$HOME/Dokumente/netscans/sslkeys/sslkeys.txt
 
 export GOPATH=~/Projects/share/go
 export GOROOT=/opt/go
