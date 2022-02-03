@@ -3,7 +3,7 @@
 # for examples
 
 # Used for docker container accessing host volumes
-# Allready defined and set
+# Already defined and set
 #UID=`id -u`
 export UID
 GID=`id -g`
@@ -53,36 +53,38 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+  else
+    color_prompt=
+  fi
 fi
 
-# if .git-prompt.sh exists, set options and execute it
-# export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ "'
-if [ -f ~/.git_prompt ]; then
-  GIT_PS1_SHOWDIRTYSTATE=true
-  GIT_PS1_SHOWSTASHSTATE=true
-  GIT_PS1_SHOWUNTRACKEDFILES=true
-  GIT_PS1_SHOWUPSTREAM="auto"
-  GIT_PS1_HIDE_IF_PWD_IGNORED=true
-  GIT_PS1_SHOWCOLORHINTS=true
-  . ~/.git_prompt
-fi
-
+# set colored prompt and if exists with git prompt support
 if [ "$color_prompt" = yes ]; then
-#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-#    PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;32m\]@\[\033[0;32m\]\h \[\033[0;33m\]\w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─▶\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\] \[\033[0m\] '
-    PS1='\[\033[0m\033[01;32m\]\u@\h:\[\033[01;34m\]\w\[\033[01;33m\]$(__git_ps1)\n\[\033[0;32m\]└─▶\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\]\[\033[0m\] '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+   if [ -f ~/.git_prompt ]; then
+     export PROMPT_COMMAND='__git_ps1 "\[\e[0;32m\]\[\e[0m\e[0;32m\]\u@\h \[\e[0;33m\]\w" "\n\[\e[0;32m\]└─▶\[\e[0m\e[0;32m\] \\\$ \[\033[0m\]"'
+     GIT_PS1_SHOWDIRTYSTATE=true
+     GIT_PS1_SHOWSTASHSTATE=true
+     GIT_PS1_SHOWUNTRACKEDFILES=true
+     GIT_PS1_SHOWUPSTREAM="auto"
+     GIT_PS1_HIDE_IF_PWD_IGNORED=true
+     GIT_PS1_SHOWCOLORHINTS=true
+     . ~/.git_prompt
+   elif [[ ${EUID} == 0 ]] ; then
+     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+   else
+ #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w \$\[\033[00m\] '
+ #    PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\]@\[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\] ▶\[\033[0m\]
+     PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;32m\]@\[\033[0;32m\]\h \[\033[0;33m\]\w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\] '
+   fi
+ else
+     PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
+ fi
+ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -93,7 +95,7 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
+# enable color support of ls and also add handy aliases with color
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -105,22 +107,15 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-#alias ll='ls -alF'
-#alias la='ls -A'
-#alias l='ls -CF'
-#alias lh='ls -laFh'
-
 # common aliases
 
-alias clear='echo -e "\e[2J"'
+alias clear='echo -e "\e[H\e[2J"'
 alias ls='ls --color=always'
 alias ll='ls -AFlh --group-directories-first'
 alias lf='ll -rt'
-alias l='lf'
+alias la='ls -A'
+alias lh='ls -laFh'
+alias l='ls -CF'
 alias nl="nl -ba"
 
 alias p='pushd'
@@ -134,6 +129,7 @@ alias tm='tmux attach'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# Open my personal vim-wiki
 alias mdw='vi ~/Dokumente/mdwiki/index.mdw'
 
 # Alias definitions.
@@ -156,7 +152,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-###   ###
+# Use fzf behavior
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+### some exports
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 export PATH=$PATH:~/bin:~/.local/bin
 export SSLKEYLOGFILE=$HOME/Dokumente/netscans/sslkeys/sslkeys.txt
@@ -183,5 +185,3 @@ export PATH=$PATH:/opt/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # EOF
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
