@@ -7,15 +7,18 @@ colour=green
 regexp=^PASS$
 colour=green
 -
-regexp=^(ok|\?) .*
-colour=green
--
 regexp=--- FAIL: .*
 colour=red
 -
-regexp=^FAIL.*$
+regexp=FAIL.*
 colour=red
 -
 regexp=[^\s]+\.go(:\d+)?
-colour=white
+colour=cyan
+-
+regexp=^\?[ \t].*
+colour=yellow
+-
+regexp=^ok[ \t].*
+colour=green
 
